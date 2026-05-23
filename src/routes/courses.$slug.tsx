@@ -8,7 +8,6 @@ import {
   Clock,
   Play,
   Check,
-  Shield,
   Lock,
   User,
   Quote,
@@ -93,7 +92,7 @@ function CourseDetailsPage() {
           {/* RIGHT COLUMN — 30% */}
           <div className="lg:flex-none lg:w-[30%] space-y-8">
             <div className="lg:sticky lg:top-24 space-y-8">
-              <SidebarCard courseSlug={course.slug} />
+              <SidebarCard course={course} />
               <InstructorSection instructor={course.instructor} />
             </div>
           </div>
@@ -169,17 +168,12 @@ function CourseTitle({ course }: { course: Course }) {
 
 function PreviewCard({ image }: { image: string }) {
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden bg-gradient-to-br from-brand/5 via-purple-50 to-blue-50 border border-border group cursor-pointer animate-fade-in">
+    <div className="relative w-full rounded-2xl overflow-hidden bg-gradient-to-br from-brand/5 via-purple-50 to-blue-50 border border-border animate-fade-in">
       <img
         src={image}
         alt="Course preview"
-        className="w-full h-[200px] sm:h-[260px] md:h-[420px] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+        className="w-full h-auto max-h-[200px] sm:max-h-[260px] lg:h-[420px] lg:max-h-none object-contain lg:object-cover transition-transform duration-700"
       />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-          <Play className="w-6 h-6 md:w-8 md:h-8 text-white fill-white ml-0.5" />
-        </span>
-      </div>
     </div>
   );
 }
@@ -399,7 +393,7 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
   );
 }
 
-function SidebarCard({ courseSlug }: { courseSlug: string }) {
+function SidebarCard({ course }: { course: Course }) {
   return (
     <div className="bg-white rounded-2xl p-5 sm:p-8 border border-border">
       <div className="flex items-baseline gap-3">
@@ -407,18 +401,68 @@ function SidebarCard({ courseSlug }: { courseSlug: string }) {
         <span className="text-sm text-muted-foreground">DA</span>
       </div>
 
+      <div className="mt-5 space-y-3 text-sm text-muted-foreground">
+        <div className="flex items-center gap-3">
+          <BookOpen className="w-4 h-4 text-brand shrink-0" />
+          <span>In-person + Online</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <Clock className="w-4 h-4 text-brand shrink-0" />
+          <span>8 weeks per level</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <Users className="w-4 h-4 text-brand shrink-0" />
+          <span>Max 12 students per cohort</span>
+        </div>
+      </div>
+
+      <div className="mt-5 pt-5 border-t border-border">
+        <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
+          Student journey
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Each level is independent but structured for seamless progression. Students must pass an end-of-level test before advancing.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {["A1", "A2", "B1", "B2", "C1", "C2"].map((level) => (
+            <span
+              key={level}
+              className="px-3 py-1 text-xs font-medium bg-brand/10 text-brand rounded-full"
+            >
+              {level}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-5 pt-5 border-t border-border">
+        <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground mb-3">
+          Deliverables
+        </p>
+        <ul className="space-y-2">
+          {[
+            "Session recordings",
+            "PDF practice sheets",
+            "Telegram group",
+            "End-of-level test",
+            "Completion certificate",
+          ].map((item) => (
+            <li key={item} className="flex items-center gap-2 text-xs text-muted-foreground">
+              <Check className="w-3 h-3 text-brand shrink-0" strokeWidth={3} />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <RegisterDialog
-        defaultCourse={courseSlug}
+        defaultCourse={course.slug}
         trigger={
           <button className="mt-5 w-full h-14 bg-brand hover:bg-brand/90 text-white font-medium text-base rounded-xl transition-colors active:scale-[0.98]">
             Enroll Today
           </button>
         }
       />
-      <p className="mt-3 text-center text-xs text-muted-foreground flex items-center justify-center gap-1.5">
-        <Shield className="w-3.5 h-3.5" />
-        30-Day Money Back Guarantee
-      </p>
     </div>
   );
 }
@@ -431,9 +475,6 @@ function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
           <span className="text-xl font-semibold text-brand">4,500</span>
           <span className="text-sm text-muted-foreground">DA</span>
         </div>
-        <p className="text-xs text-muted-foreground flex items-center gap-1">
-          <Shield className="w-3 h-3" /> 30-Day Guarantee
-        </p>
       </div>
       <RegisterDialog
         defaultCourse={courseSlug}

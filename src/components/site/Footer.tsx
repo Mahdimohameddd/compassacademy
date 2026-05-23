@@ -43,15 +43,15 @@ export function Footer() {
             Contact
           </h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li>hello@compass-academy.dz</li>
-            <li>Algiers, Algeria</li>
+            <li>thecompassacademy@gmail.com</li>
+            <li>Algeria, Birtouta</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-1 text-xs text-muted-foreground text-center sm:text-left">
           <span>© {new Date().getFullYear()} Compass Academy</span>
-          <span className="font-mono-display tracking-wider uppercase">Made with care</span>
+          
         </div>
       </div>
     </footer>
