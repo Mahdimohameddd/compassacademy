@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { CourseCard } from "@/components/site/CourseCard";
 import { courses } from "@/lib/courses";
-import ppImage from "@/assets/pp.png";
-import blackImage from "@/assets/Black.png";
+import ppImage from "@/assets/pp.webp";
+import blackImage from "@/assets/Black.webp";
 import dodoBg from "@/assets/dodo.webp";
 
 export const Route = createFileRoute("/")({
