@@ -24,7 +24,7 @@ export function RegisterDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden border-border rounded-md gap-0">
+      <DialogContent className="max-w-4xl p-0 overflow-hidden border-border rounded-md gap-0 mx-2 sm:mx-auto data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
         <div className="grid md:grid-cols-2">
           {/* Left — image */}
           <div className="hidden md:block">
