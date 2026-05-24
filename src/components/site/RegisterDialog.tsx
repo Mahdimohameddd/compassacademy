@@ -27,7 +27,8 @@ export function RegisterDialog({
     });
 
     if (err) {
-      setError("Something went wrong. Please try again.");
+      console.error("Supabase insert error:", err);
+      setError(err.message || "Something went wrong. Please try again.");
       return;
     }
 
