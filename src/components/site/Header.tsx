@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Search } from "lucide-react";
-import logo from "@/assets/compass.png";
+import logo from "@/assets/compass.svg";
 
 export function Header() {
   const [open, setOpen] = useState(false);

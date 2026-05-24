@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/compass.png";
+import logo from "@/assets/compass.svg";
 
 export function Footer() {
   return (
