@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import popupImg from "@/assets/popup.webp";
+import logoImg from "@/assets/compass.svg";
 
 export function RegisterDialog({
   trigger,
@@ -24,7 +25,7 @@ export function RegisterDialog({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden border-border rounded-md gap-0 mx-2 sm:mx-auto data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
+      <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-4xl w-full p-0 overflow-hidden border-border rounded-md gap-0 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
         <div className="grid md:grid-cols-2">
           {/* Left — image */}
           <div className="hidden md:block">
@@ -37,6 +38,10 @@ export function RegisterDialog({
 
           {/* Right — form */}
           <div className="p-8 md:p-10">
+            {/* Logo on mobile */}
+            <div className="md:hidden flex justify-center mb-4">
+              <img src={logoImg} alt="Compass Academy" className="h-8 w-auto" />
+            </div>
             {submitted ? (
               <div className="py-16 text-center animate-fade-in">
                 <div className="mx-auto w-12 h-12 rounded-full bg-brand-soft border border-brand/30 flex items-center justify-center text-brand">
