@@ -26,12 +26,12 @@ export function CourseCard({ course }: { course: Course }) {
       <Link
         to="/courses/$slug"
         params={{ slug: course.slug }}
-        className="mt-5 sm:mt-6 block rounded-2xl overflow-hidden border border-border"
+        className="mt-5 sm:mt-6 block rounded-2xl overflow-hidden border border-border group"
       >
         <img
           src={course.image}
           alt={course.title}
-          className="w-full aspect-[16/10] object-cover transition duration-700 rounded-2xl"
+          className="w-full aspect-[16/10] object-cover lg:grayscale lg:group-hover:grayscale-0 lg:group-hover:scale-[1.02] transition duration-700 rounded-2xl"
           loading="lazy"
         />
       </Link>
