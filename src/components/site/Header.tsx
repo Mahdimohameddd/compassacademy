@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Search } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/compass.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -43,8 +43,8 @@ export function Header() {
           <div className="hidden md:relative md:block">
             <input
               type="text"
-              placeholder="Choose your next language..."
-              className="w-72 h-10 pl-4 pr-16 bg-secondary border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-brand transition-colors"
+              placeholder="Explore languages..."
+              className="w-72 h-10 pl-4 pr-24 bg-secondary border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-brand transition-colors"
             />
             <button className="absolute right-1 top-1/2 -translate-y-1/2 h-8 px-3 bg-brand hover:bg-brand/90 text-white text-xs font-medium rounded-md transition-colors">
               Search
