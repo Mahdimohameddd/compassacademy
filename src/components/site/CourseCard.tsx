@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Play, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Course } from "@/lib/courses";
 import { RegisterDialog } from "./RegisterDialog";
 
@@ -26,19 +26,14 @@ export function CourseCard({ course }: { course: Course }) {
       <Link
         to="/courses/$slug"
         params={{ slug: course.slug }}
-        className="mt-5 sm:mt-6 block relative rounded-2xl overflow-hidden border border-border group"
+        className="mt-5 sm:mt-6 block rounded-2xl overflow-hidden border border-border"
       >
         <img
           src={course.image}
           alt={course.title}
-          className="w-full aspect-[16/10] object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition duration-700 rounded-2xl"
+          className="w-full aspect-[16/10] object-cover transition duration-700 rounded-2xl"
           loading="lazy"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-background/80 backdrop-blur flex items-center justify-center border border-border group-hover:scale-110 transition-transform duration-500">
-            <Play className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" fill="currentColor" />
-          </span>
-        </div>
       </Link>
 
       {/* Description */}
@@ -58,11 +53,11 @@ export function CourseCard({ course }: { course: Course }) {
               <span className="text-xs sm:text-sm font-normal text-muted-foreground">DA</span>
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex w-full sm:w-auto gap-2">
             <Link
               to="/courses/$slug"
               params={{ slug: course.slug }}
-              className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-3 sm:py-2.5 text-sm font-medium border border-border text-foreground hover:border-foreground transition-colors rounded-xl whitespace-nowrap"
+              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3 sm:px-4 py-3 sm:py-2.5 text-sm font-medium border border-border text-foreground hover:border-foreground transition-colors rounded-xl whitespace-nowrap"
             >
               View details
             </Link>
@@ -71,7 +66,7 @@ export function CourseCard({ course }: { course: Course }) {
               trigger={
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-3 sm:py-2.5 text-sm font-medium bg-brand text-primary-foreground hover:bg-foreground transition-colors rounded-xl whitespace-nowrap"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3 sm:px-4 py-3 sm:py-2.5 text-sm font-medium bg-brand text-primary-foreground hover:bg-foreground transition-colors rounded-xl whitespace-nowrap"
                 >
                   Enroll now <ArrowRight className="w-3 sm:w-3.5 h-3 sm:h-3.5" />
                 </button>
