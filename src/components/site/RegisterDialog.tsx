@@ -84,18 +84,16 @@ export function RegisterDialog({
                       className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
                     />
                   </Field>
-                  <Field label="Language">
+                  <Field label="Level you want to learn">
                     <select
-                      defaultValue={defaultCourse ?? "english"}
+                      defaultValue="a1"
                       className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand focus:bg-background transition-colors"
                     >
-                      <option value="english">English — A1 to C2</option>
-                      <option value="french" disabled>
-                        French (coming soon)
-                      </option>
-                      <option value="spanish" disabled>
-                        Spanish (coming soon)
-                      </option>
+                      <option value="a1">A1 — Beginner</option>
+                      <option value="a2">A2 — Elementary</option>
+                      <option value="b1">B1 — Intermediate</option>
+                      <option value="b2">B2 — Upper Intermediate</option>
+                      <option value="c1">C1 — Advanced</option>
                     </select>
                   </Field>
 
