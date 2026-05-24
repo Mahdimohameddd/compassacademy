@@ -62,7 +62,6 @@ export function CourseCard({ course }: { course: Course }) {
               View details
             </Link>
             <RegisterDialog
-              defaultCourse={course.slug}
               trigger={
                 <button
                   type="button"

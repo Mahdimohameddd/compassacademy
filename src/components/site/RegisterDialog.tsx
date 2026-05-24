@@ -1,20 +1,36 @@
-import { useState, type ReactNode } from "react";
+import { useState, type ReactNode, type FormEvent } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import popupImg from "@/assets/popup.webp";
 import logoImg from "@/assets/compass.svg";
+import { supabase } from "@/lib/supabase";
 
 export function RegisterDialog({
   trigger,
-  defaultCourse,
 }: {
   trigger: ReactNode;
-  defaultCourse?: string;
 }) {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError("");
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const { error: err } = await supabase.from("registrations").insert({
+      full_name: data.get("full_name"),
+      phone: data.get("phone"),
+      email: data.get("email"),
+      level: data.get("level"),
+    });
+
+    if (err) {
+      setError("Something went wrong. Please try again.");
+      return;
+    }
+
     setSubmitted(true);
     setTimeout(() => {
       setOpen(false);
@@ -60,42 +76,49 @@ export function RegisterDialog({
                 </p>
 
                 <form onSubmit={onSubmit} className="mt-7 space-y-4">
-                  <Field label="Full Name">
-                    <input
-                      required
-                      type="text"
-                      placeholder="Your full name"
-                      className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
-                    />
-                  </Field>
-                  <Field label="Phone Number">
-                    <input
-                      required
-                      type="tel"
-                      placeholder="+213 5XX XX XX XX"
-                      className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
-                    />
-                  </Field>
-                  <Field label="Email">
-                    <input
-                      required
-                      type="email"
-                      placeholder="email@example.com"
-                      className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
-                    />
-                  </Field>
-                  <Field label="Level you want to learn">
-                    <select
-                      defaultValue="a1"
-                      className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand focus:bg-background transition-colors"
-                    >
-                      <option value="a1">A1 — Beginner</option>
-                      <option value="a2">A2 — Elementary</option>
-                      <option value="b1">B1 — Intermediate</option>
-                      <option value="b2">B2 — Upper Intermediate</option>
-                      <option value="c1">C1 — Advanced</option>
-                    </select>
-                  </Field>
+                    {error && (
+                      <p className="text-xs text-red-500">{error}</p>
+                    )}
+                    <Field label="Full Name">
+                      <input
+                        required
+                        name="full_name"
+                        type="text"
+                        placeholder="Your full name"
+                        className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
+                      />
+                    </Field>
+                    <Field label="Phone Number">
+                      <input
+                        required
+                        name="phone"
+                        type="tel"
+                        placeholder="+213 5XX XX XX XX"
+                        className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
+                      />
+                    </Field>
+                    <Field label="Email">
+                      <input
+                        required
+                        name="email"
+                        type="email"
+                        placeholder="email@example.com"
+                        className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
+                      />
+                    </Field>
+                    <Field label="Level you want to learn">
+                      <select
+                        name="level"
+                        defaultValue="a1"
+                        className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand focus:bg-background transition-colors"
+                      >
+                        <option value="a1">A1 — Beginner</option>
+                        <option value="a2">A2 — Elementary</option>
+                        <option value="b1">B1 — Intermediate</option>
+                        <option value="b2">B2 — Upper Intermediate</option>
+                        <option value="c1">C1 — Advanced</option>
+                      </select>
+                    </Field>
 
                   <button
                     type="submit"

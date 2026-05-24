@@ -456,7 +456,6 @@ function SidebarCard({ course }: { course: Course }) {
       </div>
 
       <RegisterDialog
-        defaultCourse={course.slug}
         trigger={
           <button className="mt-5 w-full h-14 bg-brand hover:bg-brand/90 text-white font-medium text-base rounded-xl transition-colors active:scale-[0.98]">
             Enroll Today
@@ -477,7 +476,6 @@ function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
         </div>
       </div>
       <RegisterDialog
-        defaultCourse={courseSlug}
         trigger={
           <button className="h-12 px-8 bg-brand hover:bg-brand/90 text-white font-medium text-sm rounded-xl transition-colors active:scale-[0.98] shrink-0">
             Enroll Today
