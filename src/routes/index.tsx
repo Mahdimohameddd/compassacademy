@@ -71,7 +71,7 @@ function HomePage() {
             <div className="mt-6 md:hidden relative">
               <input
                 type="text"
-                placeholder="look for your language"
+                placeholder="Choose your next language..."
                 className="w-full h-12 pl-4 pr-16 bg-background border border-border rounded-xl text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-brand transition-colors"
               />
               <button className="absolute right-1.5 top-1/2 -translate-y-1/2 h-9 px-4 bg-brand hover:bg-brand/90 text-white text-sm font-medium rounded-lg transition-colors">
