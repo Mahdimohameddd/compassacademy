@@ -1,5 +1,5 @@
 import { useState, type ReactNode, type FormEvent } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import popupImg from "@/assets/popup.webp";
 import logoImg from "@/assets/compass.svg";
 import { supabase } from "@/lib/supabase";
@@ -19,11 +19,11 @@ export function RegisterDialog({
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const { error: err } = await supabase.from("registrations").insert({
-      full_name: data.get("full_name"),
-      phone: data.get("phone"),
-      email: data.get("email"),
-      level: data.get("level"),
+    const { error: err } = await supabase.rpc("insert_registration", {
+      p_full_name: data.get("full_name"),
+      p_phone: data.get("phone"),
+      p_email: data.get("email"),
+      p_level: data.get("level"),
     });
 
     if (err) {
@@ -64,17 +64,17 @@ export function RegisterDialog({
                 <div className="mx-auto w-12 h-12 rounded-full bg-brand-soft border border-brand/30 flex items-center justify-center text-brand">
                   ✓
                 </div>
-                <h3 className="mt-5 text-xl text-ink">Request received</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <DialogTitle className="mt-5 text-xl text-ink">Request received</DialogTitle>
+                <DialogDescription className="mt-2 text-sm text-muted-foreground">
                   We&apos;ll contact you within 24 hours.
-                </p>
+                </DialogDescription>
               </div>
             ) : (
               <>
-                <h3 className="text-xl text-ink">Register Now</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <DialogTitle className="text-xl text-ink">Register Now</DialogTitle>
+                <DialogDescription className="mt-1 text-sm text-muted-foreground">
                   Fill in your details to get enrolled.
-                </p>
+                </DialogDescription>
 
                 <form onSubmit={onSubmit} className="mt-7 space-y-4">
                     {error && (
