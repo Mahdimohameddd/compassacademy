@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { supabase } from "@/lib/supabase";
 import type { AuthSession } from "@supabase/supabase-js";
 import { Layout } from "@/components/site/Layout";
@@ -18,6 +19,7 @@ type Registration = {
 };
 
 function AdminPage() {
+  const { t } = useTranslation();
   const [session, setSession] = useState<AuthSession | null>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -61,7 +63,7 @@ function AdminPage() {
   if (loading) {
     return (
       <Layout>
-        <div className="mx-auto max-w-5xl px-6 py-32 text-center text-muted-foreground">Loading...</div>
+        <div className="mx-auto max-w-5xl px-6 py-32 text-center text-muted-foreground">{t("common.loading")}</div>
       </Layout>
     );
   }
@@ -70,11 +72,11 @@ function AdminPage() {
     return (
       <Layout>
         <div className="mx-auto max-w-sm px-6 py-32">
-          <h1 className="text-2xl font-semibold text-ink">Admin Login</h1>
+          <h1 className="text-2xl font-semibold text-ink">{t("admin.title")}</h1>
           <form onSubmit={signIn} className="mt-8 space-y-4">
             <input
               type="email"
-              placeholder="Email"
+              placeholder={t("admin.email")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -82,7 +84,7 @@ function AdminPage() {
             />
             <input
               type="password"
-              placeholder="Password"
+              placeholder={t("admin.password")}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -92,11 +94,11 @@ function AdminPage() {
               type="submit"
               className="w-full bg-brand text-white py-3 rounded-sm text-sm font-medium hover:bg-foreground transition-colors"
             >
-              Sign in
+              {t("admin.signIn")}
             </button>
           </form>
           <p className="mt-6 text-xs text-muted-foreground text-center">
-            <Link to="/" className="hover:text-brand">← Back to site</Link>
+            <Link to="/" className="hover:text-brand">{t("admin.backToSite")}</Link>
           </p>
         </div>
       </Layout>
@@ -107,25 +109,25 @@ function AdminPage() {
     <Layout>
       <div className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold text-ink">Registrations</h1>
+          <h1 className="text-2xl font-semibold text-ink">{t("admin.registrations")}</h1>
           <button
             onClick={signOut}
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            Sign out
+            {t("admin.signOut")}
           </button>
         </div>
-        <p className="mt-1 text-sm text-muted-foreground">{registrations.length} submissions</p>
+        <p className="mt-1 text-sm text-muted-foreground">{registrations.length} {t("admin.submissions")}</p>
 
         <div className="mt-8 overflow-x-auto">
           <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b border-border text-muted-foreground text-xs uppercase tracking-wider">
-                <th className="py-3 pr-4 font-medium">Name</th>
-                <th className="py-3 pr-4 font-medium">Phone</th>
-                <th className="py-3 pr-4 font-medium">Email</th>
-                <th className="py-3 pr-4 font-medium">Level</th>
-                <th className="py-3 font-medium">Date</th>
+                <th className="py-3 pr-4 font-medium">{t("admin.name")}</th>
+                <th className="py-3 pr-4 font-medium">{t("admin.phone")}</th>
+                <th className="py-3 pr-4 font-medium">{t("admin.emailLabel")}</th>
+                <th className="py-3 pr-4 font-medium">{t("admin.level")}</th>
+                <th className="py-3 font-medium">{t("admin.date")}</th>
               </tr>
             </thead>
             <tbody>
@@ -147,7 +149,7 @@ function AdminPage() {
               {registrations.length === 0 && (
                 <tr>
                   <td colSpan={5} className="py-12 text-center text-muted-foreground text-sm">
-                    No registrations yet.
+                    {t("admin.empty")}
                   </td>
                 </tr>
               )}

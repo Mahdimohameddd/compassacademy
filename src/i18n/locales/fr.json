@@ -1,0 +1,298 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "courses": "Cours",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "header": {
+    "searchPlaceholder": "Explorer les langues...",
+    "searchButton": "Rechercher",
+    "toggleMenu": "Menu"
+  },
+  "home": {
+    "hero": {
+      "label": "01 — Compass Academy",
+      "heading": "Apprenez une langue. Vivez-la.",
+      "tagline": "Parlez avec confiance — du A1 au C2.",
+      "description": "Programmes structurés, petits groupes et instructeurs dévoués.",
+      "exploreCourses": "Explorer les cours",
+      "aboutAcademy": "À propos de l'académie"
+    },
+    "featured": {
+      "label": "02 — À la une",
+      "heading": "Inscriptions ouvertes — Anglais",
+      "allCourses": "Tous les cours",
+      "method": "La méthode Compass",
+      "methodHeading": "Des conversations réelles. Des progrès réels.",
+      "methodDescription": "Chaque niveau est conçu autour de l'oral, de l'écoute, de la grammaire et du vocabulaire — avec une pratique constante et des retours d'instructeurs certifiés.",
+      "viewCourse": "Voir le cours d'anglais"
+    },
+    "philosophy": {
+      "label": "03 — Philosophie",
+      "text": "Nous croyons que l'apprentissage d'une langue doit être une expérience — pas un cours magistral. Petits groupes. Retours honnêtes. Progrès réels, niveau par niveau.",
+      "items": [
+        "Utilisation pratique de l'anglais — pas seulement la théorie",
+        "Expression orale et communication à chaque session",
+        "Progression intensive par niveau",
+        "Participation active des étudiants",
+        "Application linguistique dans la vie réelle",
+        "Environnement qui renforce la confiance"
+      ]
+    }
+  },
+  "about": {
+    "label": "À propos",
+    "heading": "Une académie moderne pour les apprenants d'aujourd'hui",
+    "p1": "Compass Academy a été fondée sur une idée simple : apprendre une langue doit être comme la vivre. Nous combinons des programmes structurés avec des conversations réelles et des petits groupes pour que chaque étudiant reçoive l'attention qu'il mérite.",
+    "p2": "Nos instructeurs sont certifiés, nos supports sont créés en interne, et chaque niveau se termine par une évaluation réelle — pour que les progrès soient visibles et tangibles, pas seulement une promesse."
+  },
+  "courses": {
+    "label": "04 — Catalogue",
+    "heading": "Cours — choisissez votre voie.",
+    "description": "Des programmes structurés du débutant à l'avancé. Chaque niveau comprend des enregistrements, des fiches d'exercices et un certificat de fin de niveau.",
+    "comingSoon": "Prochainement",
+    "notFound": "Cours introuvable",
+    "backToCourses": "Retour aux cours",
+    "unavailable": "Ce cours n'est pas encore disponible.",
+    "browseCourses": "Parcourir les cours"
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Parlons-en",
+    "description": "Contactez-nous pour vous inscrire, poser une question ou planifier un test de niveau.",
+    "fullName": "Nom complet",
+    "email": "Email",
+    "courseOfInterest": "Cours d'intérêt",
+    "message": "Message",
+    "sendMessage": "Envoyer le message"
+  },
+  "register": {
+    "title": "Inscription",
+    "description": "Remplissez vos coordonnées pour vous inscrire.",
+    "fullName": "Nom complet",
+    "fullNamePlaceholder": "Votre nom complet",
+    "phone": "Numéro de téléphone",
+    "phonePlaceholder": "+213 5XX XX XX XX",
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "level": "Niveau souhaité",
+    "a1": "A1 — Débutant",
+    "a2": "A2 — Élémentaire",
+    "b1": "B1 — Intermédiaire",
+    "b2": "B2 — Intermédiaire supérieur",
+    "c1": "C1 — Avancé",
+    "submit": "S'inscrire",
+    "successTitle": "Demande reçue",
+    "successDescription": "Nous vous contacterons sous 24 heures.",
+    "errorFallback": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "courseDetail": {
+    "about": "À propos de ce cours",
+    "outcomes": "Après ce cours, vous serez capable de",
+    "support": "Soutien d'apprentissage structuré à chaque niveau",
+    "requirements": "Prérequis",
+    "curriculum": "Programme du cours",
+    "reviews": "Avis des étudiants",
+    "instructor": "À propos de l'instructeur",
+    "lessons": "Leçons",
+    "assignments": "Devoirs",
+    "price": "Prix par niveau",
+    "enroll": "S'inscrire",
+    "viewDetails": "Voir les détails",
+    "studentJourney": "Parcours d'apprentissage",
+    "journeyDescription": "Chaque niveau est indépendant mais structuré pour une progression fluide. Les étudiants doivent réussir un test de fin de niveau avant de passer au niveau supérieur.",
+    "deliverables": "Livrables",
+    "deliverableItems": [
+      "Enregistrements des sessions",
+      "Fiches d'exercices PDF",
+      "Groupe Telegram",
+      "Test de fin de niveau",
+      "Certificat de completion"
+    ],
+    "format": "En présentiel + En ligne",
+    "duration": "8 semaines par niveau",
+    "cohortSize": "Maximum 12 étudiants par groupe",
+    "sections": "sections",
+    "lessons_lower": "leçons",
+    "unlocked": "déverrouillées",
+    "reviewSummary": "sur 5"
+  },
+  "footer": {
+    "description": "Une académie de langues moderne conçue pour les apprenants qui veulent parler avec confiance.",
+    "navigate": "Navigation",
+    "contactHeading": "Contact",
+    "email": "thecompassacademy@gmail.com",
+    "address": "Algérie, Birtouta",
+    "copyright": "Compass Academy"
+  },
+  "common": {
+    "pageNotFound": "404",
+    "pageNotFoundTitle": "Page introuvable",
+    "pageNotFoundText": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "goHome": "Accueil",
+    "pageError": "Cette page n'a pas pu se charger",
+    "pageErrorText": "Une erreur est survenue. Vous pouvez actualiser ou retourner à l'accueil.",
+    "tryAgain": "Réessayer",
+    "loading": "Chargement..."
+  },
+  "admin": {
+    "title": "Connexion administrateur",
+    "email": "Email",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "backToSite": "← Retour au site",
+    "registrations": "Inscriptions",
+    "signOut": "Se déconnecter",
+    "submissions": "inscriptions",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "emailLabel": "Email",
+    "level": "Niveau",
+    "date": "Date",
+    "empty": "Aucune inscription pour le moment."
+  },
+  "course": {
+    "english": {
+      "title": "Cours d'Anglais",
+      "category": "Cours d'Anglais",
+      "tagline": "Parlez avec confiance — du A1 au C2.",
+      "description": "Les étudiants de Compass Academy n'étudient pas seulement l'anglais — ils utilisent l'anglais à chaque session. Un programme construit autour de l'usage pratique, de l'application réelle et de la confiance par la pratique orale régulière.",
+      "longDescription": "Les étudiants de Compass Academy n'étudient pas seulement l'anglais — ils utilisent l'anglais à chaque session. Le programme est construit autour de l'usage pratique, de l'application réelle et de la confiance par la pratique orale régulière.\n\n• Utilisation pratique de l'anglais (pas seulement la théorie)\n• Expression orale et communication à chaque session\n• Progression intensive par niveau\n• Participation active des étudiants\n• Application linguistique dans la vie réelle\n• Environnement qui renforce la confiance",
+      "duration": "8 semaines par niveau",
+      "totalDuration": "18h 30m",
+      "levels": "A1 — C2",
+      "format": "En présentiel + en ligne",
+      "location": "Alger + Zoom en direct",
+      "cohortSize": "Maximum 12 étudiants",
+      "highlights": [
+        "Parler avec confiance dans les conversations quotidiennes",
+        "Améliorer la prononciation et la fluidité",
+        "Utiliser un vocabulaire avancé naturellement",
+        "Rédiger des emails professionnels",
+        "Mieux comprendre les locuteurs natifs",
+        "Développer la confiance à l'oral"
+      ],
+      "learningSupport": [
+        "Fiches d'exercices — vocabulaire, grammaire et tâches orales partagées via Google Classroom",
+        "Fiches de vocabulaire — termes et phrases clés par niveau pour une révision structurée",
+        "Activités orales — exercices guidés basés sur des scénarios réels"
+      ],
+      "requirements": [
+        "Compréhension de base de l'anglais",
+        "Ordinateur portable ou smartphone",
+        "Connexion Internet",
+        "Motivation à pratiquer quotidiennement"
+      ],
+      "features": [
+        "Langue anglaise",
+        "Exercices et quiz",
+        "Débutant à avancé",
+        "Accès mobile et desktop",
+        "Accès à vie",
+        "Certificat de completion"
+      ],
+      "deliverables": [
+        { "title": "Enregistrements des sessions", "body": "Uploadés sur Google Drive et partagés sous 24 heures. Utilisés pour la révision et les sessions manquées." },
+        { "title": "Fiches d'exercices PDF", "body": "Tâches de vocabulaire, grammaire et expression orale partagées via Google Classroom. Format imprimable et numérique." },
+        { "title": "Groupe Telegram", "body": "Un groupe dédié par cohorte. Communication avec le professeur, Q&A, partage de fichiers et mises à jour." },
+        { "title": "Test de fin de niveau", "body": "Évaluation finale par niveau — teste l'oral, la grammaire, le vocabulaire et la compréhension." },
+        { "title": "Certificat de completion", "body": "Délivré après réussite du test final. Confirme le niveau atteint (A1 à C2)." }
+      ],
+      "weeklyBreakdown": [
+        { "label": "Expression orale", "percent": 35 },
+        { "label": "Grammaire", "percent": 25 },
+        { "label": "Compréhension", "percent": 20 },
+        { "label": "Écriture & Vocabulaire", "percent": 20 }
+      ],
+      "curriculum": [
+        { "level": "A1", "name": "Débutant", "focus": "Salutations, grammaire de base, présent, vocabulaire quotidien." },
+        { "level": "A2", "name": "Élémentaire", "focus": "Passé et futur, conversations courtes, voyages et vie quotidienne." },
+        { "level": "B1", "name": "Intermédiaire", "focus": "Exprimer des opinions, gérer la plupart des situations, rédiger des textes structurés." },
+        { "level": "B2", "name": "Intermédiaire supérieur", "focus": "Discussion fluide, grammaire nuancée, anglais professionnel et académique." },
+        { "level": "C1", "name": "Avancé", "focus": "Sujets complexes, expressions idiomatiques, rédaction avancée et présentations." },
+        { "level": "C2", "name": "Maîtrise", "focus": "Maîtrise quasi-native — débat, littérature, vocabulaire spécialisé." }
+      ],
+      "sections": [
+        {
+          "title": "Introduction à la communication",
+          "lessons": [
+            { "title": "Bienvenue et présentation du cours", "duration": "10:00" },
+            { "title": "Pourquoi la communication est importante", "duration": "15:00" },
+            { "title": "Pratique de présentation", "duration": "20:00" }
+          ]
+        },
+        {
+          "title": "Essentiels de la prononciation",
+          "lessons": [
+            { "title": "Sons des voyelles et intonation", "duration": "25:00" },
+            { "title": "Groupes de consonnes", "duration": "20:00" },
+            { "title": "Erreurs de prononciation courantes", "duration": "15:00" },
+            { "title": "Session pratique", "duration": "30:00" }
+          ]
+        },
+        {
+          "title": "Parler avec fluidité",
+          "lessons": [
+            { "title": "Développer des réponses naturelles", "duration": "20:00" },
+            { "title": "Relier les idées avec aisance", "duration": "25:00" },
+            { "title": "Gérer les interruptions", "duration": "15:00" },
+            { "title": "Exercices de fluidité", "duration": "30:00" }
+          ]
+        },
+        {
+          "title": "Bases de l'anglais des affaires",
+          "lessons": [
+            { "title": "Rédaction d'emails et étiquette", "duration": "25:00" },
+            { "title": "Langage des réunions et présentations", "duration": "30:00" },
+            { "title": "Phrases de négociation", "duration": "20:00" },
+            { "title": "Projet d'email professionnel", "duration": "45:00" }
+          ]
+        },
+        {
+          "title": "Conversations avancées",
+          "lessons": [
+            { "title": "Débat et discussion", "duration": "30:00" },
+            { "title": "Idiomes et expressions", "duration": "20:00" },
+            { "title": "Nuances culturelles", "duration": "25:00" },
+            { "title": "Préparation à l'évaluation finale", "duration": "40:00" }
+          ]
+        }
+      ],
+      "instructor": {
+        "name": "Hanane Boumediene",
+        "title": "Instructrice senior d'anglais",
+        "bio": "Hanane Boumediene est une instructrice d'anglais certifiée avec plus de 12 ans d'expérience dans l'enseignement. Elle est titulaire d'un doctorat en linguistique appliquée et a aidé des milliers d'étudiants à atteindre la fluidité en anglais.",
+        "experience": "12+ ans d'enseignement",
+        "students": "5 000+ étudiants formés",
+        "philosophy": "L'apprentissage des langues doit être pratique, agréable et basé sur la communication réelle. Chaque étudiant a la capacité de devenir fluent avec les bons conseils et une pratique régulière."
+      },
+      "reviews": [
+        { "name": "أحمد بن علي", "avatar": "", "profession": "مهندس برمجيات", "rating": 5, "text": "Ce cours a transformé ma confiance en anglais. L'approche structurée et la pratique de la conversation réelle ont fait toute la différence. Je peux maintenant communiquer efficacement au travail et dans la vie quotidienne." },
+        { "name": "سارة محمود", "avatar": "", "profession": "أخصائية تسويق", "rating": 5, "text": "Les sections de prononciation et de fluidité ont été incroyablement utiles. Les instructeurs sont compétents et les sessions de pratique entre pairs m'ont donné la confiance nécessaire pour parler sans crainte de faire des erreurs." },
+        { "name": "مريم بن سعيد", "avatar": "", "profession": "طالبة", "rating": 4, "text": "J'ai adoré le module d'anglais des affaires — il m'a aidée à me préparer aux entretiens et aux emails professionnels. Les supports de cours sont bien organisés et faciles à suivre." },
+        { "name": "خالد بوعبد الله", "avatar": "", "profession": "محلل أعمال", "rating": 5, "text": "Excellent cours avec une application pratique et réelle. La répartition hebdomadaire entre l'oral, la grammaire et la compréhension m'a maintenu engagé tout au long. Hautement recommandé." }
+      ],
+      "faq": [
+        { "q": "Comment connaître mon niveau de départ ?", "a": "Chaque nouvel étudiant passe un test de placement gratuit avant l'inscription — oral + écrit — pour commencer au bon niveau." },
+        { "q": "Que se passe-t-il si je manque une session ?", "a": "Toutes les sessions sont enregistrées et partagées via Google Drive sous 24 heures. Les fiches d'exercices restent disponibles pendant tout le niveau." },
+        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre un niveau complet de 8 semaines. Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause entre les niveaux." },
+        { "q": "Quand commencent les nouveaux groupes ?", "a": "De nouveaux groupes commencent chaque mois. Contactez-nous via le formulaire d'inscription et nous vous enverrons les prochaines dates." },
+        { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — du A1 au C2." },
+        { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Les deux. Les sessions ont lieu en présentiel à Alger et sont simultanément diffusées via Zoom. Vous pouvez assister de l'une ou l'autre manière." }
+      ]
+    },
+    "french": {
+      "title": "Français",
+      "category": "Langues",
+      "tagline": "Prochainement.",
+      "available": false
+    },
+    "spanish": {
+      "title": "Espagnol",
+      "category": "Langues",
+      "tagline": "Prochainement.",
+      "available": false
+    }
+  }
+}

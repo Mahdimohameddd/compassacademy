@@ -1,4 +1,5 @@
 import { createFileRoute, Outlet, useRouterState } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/site/Layout";
 import { CourseCard } from "@/components/site/CourseCard";
 import { courses } from "@/lib/courses";
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/courses")({
 });
 
 function CoursesPage() {
+  const { t } = useTranslation();
   const location = useRouterState({ select: (s) => s.location });
   const isDetail = location.pathname.split("/").length > 2;
 
@@ -31,14 +33,13 @@ function CoursesPage() {
     <Layout>
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-12 sm:pt-24 pb-12 sm:pb-16">
         <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-brand">
-          04 — Catalogue
+          {t("courses.label")}
         </p>
         <h1 className="mt-4 sm:mt-6 font-display text-3xl sm:text-5xl md:text-7xl leading-[1.05] text-ink max-w-3xl">
-          Courses — <span className="font-fancy text-brand">choose your path.</span>
+          {t("courses.heading")}
         </h1>
         <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed">
-          Structured programs from beginner to advanced. Every level includes recordings, practice
-          sheets, and an end-of-level certificate.
+          {t("courses.description")}
         </p>
       </section>
 
@@ -48,7 +49,7 @@ function CoursesPage() {
             <CourseCard course={c} />
             {!c.available && (
               <p className="mt-3 text-xs font-mono-display uppercase tracking-wider text-muted-foreground text-center">
-                Coming soon
+                {t("courses.comingSoon")}
               </p>
             )}
           </div>

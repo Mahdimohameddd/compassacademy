@@ -1,0 +1,298 @@
+{
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "searchPlaceholder": "Explore languages...",
+    "searchButton": "Search",
+    "toggleMenu": "Toggle menu"
+  },
+  "home": {
+    "hero": {
+      "label": "01 — Compass Academy",
+      "heading": "Learn a language. Live it.",
+      "tagline": "Speak with confidence — from A1 to C2.",
+      "description": "Structured programs, small cohorts, and instructors who care.",
+      "exploreCourses": "Explore courses",
+      "aboutAcademy": "About the academy"
+    },
+    "featured": {
+      "label": "02 — Featured",
+      "heading": "Now enrolling — English",
+      "allCourses": "All courses",
+      "method": "The Compass Method",
+      "methodHeading": "Real conversation. Real progress.",
+      "methodDescription": "Every level is designed around speaking, listening, grammar and vocabulary — with constant practice and feedback from certified instructors.",
+      "viewCourse": "View English course"
+    },
+    "philosophy": {
+      "label": "03 — Philosophy",
+      "text": "We believe learning a language should feel like an experience — not a lecture. Small groups. Honest feedback. Real progress, level by level.",
+      "items": [
+        "Practical English usage — not only theory",
+        "Speaking and communication in every session",
+        "Intensive level-based progression",
+        "Active student participation",
+        "Real-life language application",
+        "Confidence-building environment"
+      ]
+    }
+  },
+  "about": {
+    "label": "About",
+    "heading": "A modern academy for modern learners",
+    "p1": "Compass Academy was built on a simple idea: learning a language should feel like living it. We combine structured curriculums with real conversation and small cohorts so every student gets the attention they deserve.",
+    "p2": "Our instructors are certified, our materials are crafted in-house, and every level ends with a real evaluation — so progress is something you can see and feel, not just a promise."
+  },
+  "courses": {
+    "label": "04 — Catalogue",
+    "heading": "Courses — choose your path.",
+    "description": "Structured programs from beginner to advanced. Every level includes recordings, practice sheets, and an end-of-level certificate.",
+    "comingSoon": "Coming soon",
+    "notFound": "Course not found",
+    "backToCourses": "Back to courses",
+    "unavailable": "This course is not yet available.",
+    "browseCourses": "Browse courses"
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Let's talk",
+    "description": "Reach out to enroll, ask a question, or schedule a placement test.",
+    "fullName": "Full name",
+    "email": "Email",
+    "courseOfInterest": "Course of interest",
+    "message": "Message",
+    "sendMessage": "Send message"
+  },
+  "register": {
+    "title": "Register Now",
+    "description": "Fill in your details to get enrolled.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Your full name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+213 5XX XX XX XX",
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "level": "Level you want to learn",
+    "a1": "A1 — Beginner",
+    "a2": "A2 — Elementary",
+    "b1": "B1 — Intermediate",
+    "b2": "B2 — Upper Intermediate",
+    "c1": "C1 — Advanced",
+    "submit": "Register Now",
+    "successTitle": "Request received",
+    "successDescription": "We'll contact you within 24 hours.",
+    "errorFallback": "Something went wrong. Please try again."
+  },
+  "courseDetail": {
+    "about": "About This Course",
+    "outcomes": "After Completing This Course You Will Be Able To",
+    "support": "Structured Learning Support Every Level",
+    "requirements": "Requirements",
+    "curriculum": "Course Curriculum",
+    "reviews": "Student Reviews",
+    "instructor": "About The Instructor",
+    "lessons": "Lessons",
+    "assignments": "Assignments",
+    "price": "Price per level",
+    "enroll": "Enroll Today",
+    "viewDetails": "View details",
+    "studentJourney": "Student journey",
+    "journeyDescription": "Each level is independent but structured for seamless progression. Students must pass an end-of-level test before advancing.",
+    "deliverables": "Deliverables",
+    "deliverableItems": [
+      "Session recordings",
+      "PDF practice sheets",
+      "Telegram group",
+      "End-of-level test",
+      "Completion certificate"
+    ],
+    "format": "In-person + Online",
+    "duration": "8 weeks per level",
+    "cohortSize": "Max 12 students per cohort",
+    "sections": "sections",
+    "lessons_lower": "lessons",
+    "unlocked": "unlocked",
+    "reviewSummary": "out of 5"
+  },
+  "footer": {
+    "description": "A modern language academy designed for learners who want to speak with confidence.",
+    "navigate": "Navigate",
+    "contactHeading": "Contact",
+    "email": "thecompassacademy@gmail.com",
+    "address": "Algeria, Birtouta",
+    "copyright": "Compass Academy"
+  },
+  "common": {
+    "pageNotFound": "404",
+    "pageNotFoundTitle": "Page not found",
+    "pageNotFoundText": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go home",
+    "pageError": "This page didn't load",
+    "pageErrorText": "Something went wrong on our end. You can try refreshing or head back home.",
+    "tryAgain": "Try again",
+    "loading": "Loading..."
+  },
+  "admin": {
+    "title": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "backToSite": "← Back to site",
+    "registrations": "Registrations",
+    "signOut": "Sign out",
+    "submissions": "submissions",
+    "name": "Name",
+    "phone": "Phone",
+    "emailLabel": "Email",
+    "level": "Level",
+    "date": "Date",
+    "empty": "No registrations yet."
+  },
+  "course": {
+    "english": {
+      "title": "English Course",
+      "category": "English Courses",
+      "tagline": "Speak with confidence — from A1 to C2.",
+      "description": "Students at The Compass Academy do not only study English — they use English in every session. A program built around practical usage, real-life application, and confidence through consistent speaking practice.",
+      "longDescription": "Students at The Compass Academy do not only study English — they use English in every session. The program is built around practical usage, real-life application, and confidence through consistent speaking practice.\n\n• Practical English usage (not only theory)\n• Speaking and communication in every session\n• Intensive level-based progression\n• Active student participation\n• Real-life language application\n• Confidence-building environment",
+      "duration": "8 weeks per level",
+      "totalDuration": "18h 30m",
+      "levels": "A1 — C2",
+      "format": "In-person + online",
+      "location": "Algiers + Live Zoom",
+      "cohortSize": "Max 12 students",
+      "highlights": [
+        "Speak confidently in daily conversations",
+        "Improve pronunciation and fluency",
+        "Use advanced vocabulary naturally",
+        "Write professional emails",
+        "Understand native speakers better",
+        "Build speaking confidence"
+      ],
+      "learningSupport": [
+        "Practice datasheets — vocabulary, grammar and speaking tasks shared via Google Classroom",
+        "Vocabulary sheets — key terms and phrases per level for structured review",
+        "Speaking activities — guided exercises built around real-life scenarios"
+      ],
+      "requirements": [
+        "Basic understanding of English",
+        "Laptop or smartphone",
+        "Internet connection",
+        "Motivation to practice daily"
+      ],
+      "features": [
+        "English language",
+        "Exercises & quizzes",
+        "Beginner to advanced",
+        "Mobile & desktop access",
+        "Lifetime access",
+        "Completion certificate"
+      ],
+      "deliverables": [
+        { "title": "Session recordings", "body": "Uploaded to Google Drive and shared within 24 hours. Used for revision and missed sessions." },
+        { "title": "PDF practice sheets", "body": "Vocabulary, grammar and speaking tasks shared via Google Classroom. Printable and digital format." },
+        { "title": "Telegram group", "body": "One dedicated group per cohort. Communication with teacher, Q&A, file sharing, and updates." },
+        { "title": "End-of-level test", "body": "Final evaluation per level — tests speaking, grammar, vocabulary, and listening." },
+        { "title": "Completion certificate", "body": "Issued after passing the final test. Confirms level completion (A1 through C2)." }
+      ],
+      "weeklyBreakdown": [
+        { "label": "Speaking", "percent": 35 },
+        { "label": "Grammar", "percent": 25 },
+        { "label": "Listening", "percent": 20 },
+        { "label": "Writing & Vocab", "percent": 20 }
+      ],
+      "curriculum": [
+        { "level": "A1", "name": "Beginner", "focus": "Greetings, basic grammar, present tense, everyday vocabulary." },
+        { "level": "A2", "name": "Elementary", "focus": "Past & future tenses, short conversations, travel and daily life." },
+        { "level": "B1", "name": "Intermediate", "focus": "Express opinions, handle most situations, write structured texts." },
+        { "level": "B2", "name": "Upper-Intermediate", "focus": "Fluent discussion, nuanced grammar, professional & academic English." },
+        { "level": "C1", "name": "Advanced", "focus": "Complex topics, idiomatic speech, advanced writing and presentations." },
+        { "level": "C2", "name": "Mastery", "focus": "Near-native command — debate, literature, specialized vocabulary." }
+      ],
+      "sections": [
+        {
+          "title": "Introduction to Communication",
+          "lessons": [
+            { "title": "Welcome & Course Overview", "duration": "10:00" },
+            { "title": "Why Communication Matters", "duration": "15:00" },
+            { "title": "Self-Introduction Practice", "duration": "20:00" }
+          ]
+        },
+        {
+          "title": "Pronunciation Essentials",
+          "lessons": [
+            { "title": "Vowel Sounds & Intonation", "duration": "25:00" },
+            { "title": "Consonant Clusters", "duration": "20:00" },
+            { "title": "Common Pronunciation Errors", "duration": "15:00" },
+            { "title": "Practice Session", "duration": "30:00" }
+          ]
+        },
+        {
+          "title": "Speaking Fluently",
+          "lessons": [
+            { "title": "Building Natural Responses", "duration": "20:00" },
+            { "title": "Connecting Ideas Smoothly", "duration": "25:00" },
+            { "title": "Handling Interruptions", "duration": "15:00" },
+            { "title": "Fluency Drills", "duration": "30:00" }
+          ]
+        },
+        {
+          "title": "Business English Basics",
+          "lessons": [
+            { "title": "Email Writing & Etiquette", "duration": "25:00" },
+            { "title": "Meeting & Presentation Language", "duration": "30:00" },
+            { "title": "Negotiation Phrases", "duration": "20:00" },
+            { "title": "Professional Email Project", "duration": "45:00" }
+          ]
+        },
+        {
+          "title": "Advanced Conversations",
+          "lessons": [
+            { "title": "Debate & Discussion Skills", "duration": "30:00" },
+            { "title": "Idioms & Expressions", "duration": "20:00" },
+            { "title": "Cultural Nuances", "duration": "25:00" },
+            { "title": "Final Assessment Prep", "duration": "40:00" }
+          ]
+        }
+      ],
+      "instructor": {
+        "name": "Hanane Boumediene",
+        "title": "Senior English Language Instructor",
+        "bio": "Hanane Boumediene is a certified English language instructor with over 12 years of teaching experience. She holds a Ph.D. in Applied Linguistics and has helped thousands of students achieve fluency in English.",
+        "experience": "12+ years teaching",
+        "students": "5,000+ students taught",
+        "philosophy": "Language learning should be practical, enjoyable, and built on real communication. Every student has the ability to become fluent with the right guidance and consistent practice."
+      },
+      "reviews": [
+        { "name": "أحمد بن علي", "avatar": "", "profession": "مهندس برمجيات", "rating": 5, "text": "This course transformed my confidence in speaking English. The structured approach and real conversation practice made all the difference. I can now communicate effectively at work and in daily life." },
+        { "name": "سارة محمود", "avatar": "", "profession": "أخصائية تسويق", "rating": 5, "text": "The pronunciation and fluency sections were incredibly helpful. The instructors are knowledgeable and the peer practice sessions gave me the confidence to speak without fear of making mistakes." },
+        { "name": "مريم بن سعيد", "avatar": "", "profession": "طالبة", "rating": 4, "text": "I loved the business English module — it helped me prepare for interviews and professional emails. The course materials are well-organized and easy to follow." },
+        { "name": "خالد بوعبد الله", "avatar": "", "profession": "محلل أعمال", "rating": 5, "text": "Excellent course with practical, real-world application. The weekly breakdown between speaking, grammar, and listening kept me engaged throughout. Highly recommended." }
+      ],
+      "faq": [
+        { "q": "How do I know my starting level?", "a": "Every new student takes a free placement test before enrolling — speaking + written — so you start at the right level." },
+        { "q": "What happens if I miss a session?", "a": "All sessions are recorded and shared via Google Drive within 24 hours. Practice sheets stay available throughout the level." },
+        { "q": "Can I pay per level?", "a": "Yes. The price covers a full 8-week level. There's no long-term commitment — you can stop or pause between levels." },
+        { "q": "When do new cohorts start?", "a": "New cohorts open every month. Reach out via the enroll form and we'll send you the next start dates." },
+        { "q": "What certificate will I receive?", "a": "After passing the end-of-level test, you receive a certificate confirming your level completion — from A1 through C2." },
+        { "q": "Is the course in-person or online?", "a": "Both. Sessions are held in-person in Algiers and simultaneously streamed via Zoom. You can attend either way." }
+      ]
+    },
+    "french": {
+      "title": "French",
+      "category": "Languages",
+      "tagline": "Coming soon.",
+      "available": false
+    },
+    "spanish": {
+      "title": "Spanish",
+      "category": "Languages",
+      "tagline": "Coming soon.",
+      "available": false
+    }
+  }
+}

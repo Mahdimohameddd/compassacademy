@@ -1,4 +1,5 @@
 import { useState, type ReactNode, type FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import popupImg from "@/assets/popup.webp";
 import logoImg from "@/assets/compass.svg";
@@ -9,6 +10,7 @@ export function RegisterDialog({
 }: {
   trigger: ReactNode;
 }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -28,7 +30,7 @@ export function RegisterDialog({
 
     if (err) {
       console.error("Supabase insert error:", err);
-      setError(err.message || "Something went wrong. Please try again.");
+      setError(err.message || t("register.errorFallback"));
       return;
     }
 
@@ -64,60 +66,60 @@ export function RegisterDialog({
                 <div className="mx-auto w-12 h-12 rounded-full bg-brand-soft border border-brand/30 flex items-center justify-center text-brand">
                   ✓
                 </div>
-                <DialogTitle className="mt-5 text-xl text-ink">Request received</DialogTitle>
+                <DialogTitle className="mt-5 text-xl text-ink">{t("register.successTitle")}</DialogTitle>
                 <DialogDescription className="mt-2 text-sm text-muted-foreground">
-                  We&apos;ll contact you within 24 hours.
+                  {t("register.successDescription")}
                 </DialogDescription>
               </div>
             ) : (
               <>
-                <DialogTitle className="text-xl text-ink">Register Now</DialogTitle>
+                <DialogTitle className="text-xl text-ink">{t("register.title")}</DialogTitle>
                 <DialogDescription className="mt-1 text-sm text-muted-foreground">
-                  Fill in your details to get enrolled.
+                  {t("register.description")}
                 </DialogDescription>
 
                 <form onSubmit={onSubmit} className="mt-7 space-y-4">
                     {error && (
                       <p className="text-xs text-red-500">{error}</p>
                     )}
-                    <Field label="Full Name">
+                    <Field label={t("register.fullName")}>
                       <input
                         required
                         name="full_name"
                         type="text"
-                        placeholder="Your full name"
+                        placeholder={t("register.fullNamePlaceholder")}
                         className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
                       />
                     </Field>
-                    <Field label="Phone Number">
+                    <Field label={t("register.phone")}>
                       <input
                         required
                         name="phone"
                         type="tel"
-                        placeholder="+213 5XX XX XX XX"
+                        placeholder={t("register.phonePlaceholder")}
                         className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
                       />
                     </Field>
-                    <Field label="Email">
+                    <Field label={t("register.email")}>
                       <input
                         required
                         name="email"
                         type="email"
-                        placeholder="email@example.com"
+                        placeholder={t("register.emailPlaceholder")}
                         className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
                       />
                     </Field>
-                    <Field label="Level you want to learn">
+                    <Field label={t("register.level")}>
                       <select
                         name="level"
                         defaultValue="a1"
                         className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand focus:bg-background transition-colors"
                       >
-                        <option value="a1">A1 — Beginner</option>
-                        <option value="a2">A2 — Elementary</option>
-                        <option value="b1">B1 — Intermediate</option>
-                        <option value="b2">B2 — Upper Intermediate</option>
-                        <option value="c1">C1 — Advanced</option>
+                        <option value="a1">{t("register.a1")}</option>
+                        <option value="a2">{t("register.a2")}</option>
+                        <option value="b1">{t("register.b1")}</option>
+                        <option value="b2">{t("register.b2")}</option>
+                        <option value="c1">{t("register.c1")}</option>
                       </select>
                     </Field>
 
@@ -125,7 +127,7 @@ export function RegisterDialog({
                     type="submit"
                     className="mt-3 w-full inline-flex items-center justify-center gap-2 bg-brand text-primary-foreground hover:bg-foreground transition-colors px-5 py-3 rounded-sm text-sm font-medium tracking-wide uppercase"
                   >
-                    Register Now
+                    {t("register.submit")}
                   </button>
                 </form>
               </>

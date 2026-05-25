@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/contact")({
@@ -17,24 +18,25 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section className="mx-auto max-w-3xl px-6 lg:px-10 py-16 sm:py-24 md:py-36">
-        <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-brand">Contact</p>
+        <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-brand">{t("contact.label")}</p>
         <h1 className="mt-4 sm:mt-6 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-ink">
-          Let's <span className="font-fancy text-brand">talk</span>.
+          {t("contact.heading")}
         </h1>
         <p className="mt-6 sm:mt-8 text-sm sm:text-lg text-muted-foreground leading-relaxed">
-          Reach out to enroll, ask a question, or schedule a placement test.
+          {t("contact.description")}
         </p>
 
         <form className="mt-10 sm:mt-16 space-y-6 sm:space-y-8">
-          <Field label="Full name" type="text" />
-          <Field label="Email" type="email" />
-          <Field label="Course of interest" type="text" defaultValue="English" />
+          <Field label={t("contact.fullName")} type="text" />
+          <Field label={t("contact.email")} type="email" />
+          <Field label={t("contact.courseOfInterest")} type="text" defaultValue={t("register.a1")} />
           <div>
             <label className="block font-mono-display text-xs uppercase tracking-[0.18em] text-muted-foreground mb-3">
-              Message
+              {t("contact.message")}
             </label>
             <textarea
               rows={5}
@@ -45,7 +47,7 @@ function ContactPage() {
             type="submit"
             className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-7 py-4 sm:py-3.5 bg-foreground text-background hover:bg-brand transition-colors text-sm font-medium rounded-sm"
           >
-            Send message
+            {t("contact.sendMessage")}
           </button>
         </form>
       </section>

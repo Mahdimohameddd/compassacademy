@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import {
   ChevronRight,
   Star,
@@ -17,6 +18,7 @@ import {
 import { Layout } from "@/components/site/Layout";
 import { RegisterDialog } from "@/components/site/RegisterDialog";
 import { getCourse } from "@/lib/courses";
+import { useLocalizedCourse } from "@/lib/useLocalizedCourse";
 import type { Course, Review, CurriculumSection } from "@/lib/courses";
 
 export const Route = createFileRoute("/courses/$slug")({
@@ -36,36 +38,42 @@ export const Route = createFileRoute("/courses/$slug")({
   loader: ({ params }) => {
     const course = getCourse(params.slug);
     if (!course) throw notFound();
-    return { course };
+    return { slug: params.slug };
   },
   component: CourseDetailsPage,
-  notFoundComponent: () => (
-    <div className="mx-auto max-w-3xl px-6 py-32 text-center">
-      <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
-        404
-      </p>
-      <h1 className="mt-4 text-4xl">Course not found</h1>
-      <Link to="/courses" className="mt-8 inline-block border-b border-foreground hover:text-brand">
-        Back to courses
-      </Link>
-    </div>
-  ),
+  notFoundComponent: () => {
+    const { t } = useTranslation();
+    return (
+      <div className="mx-auto max-w-3xl px-6 py-32 text-center">
+        <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
+          {t("common.pageNotFound")}
+        </p>
+        <h1 className="mt-4 text-4xl">{t("courses.notFound")}</h1>
+        <Link to="/courses" className="mt-8 inline-block border-b border-foreground hover:text-brand">
+          {t("courses.backToCourses")}
+        </Link>
+      </div>
+    );
+  },
 });
 
 function CourseDetailsPage() {
-  const { course } = Route.useLoaderData();
+  const { t } = useTranslation();
+  const { slug } = Route.useLoaderData();
+  const course = useLocalizedCourse(slug);
+  if (!course) return null;
 
   if (!course.available) {
     return (
       <Layout>
         <div className="mx-auto max-w-3xl px-6 py-32 text-center">
           <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            Coming soon
+            {t("courses.comingSoon")}
           </p>
           <h1 className="mt-4 text-5xl font-semibold text-ink">{course.title}</h1>
-          <p className="mt-4 text-muted-foreground">This course is not yet available.</p>
+          <p className="mt-4 text-muted-foreground">{t("courses.unavailable")}</p>
           <Link to="/courses" className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-sm hover:bg-brand transition-colors">
-            Browse courses <ChevronRight className="w-4 h-4" />
+            {t("courses.browseCourses")} <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       </Layout>
@@ -108,10 +116,11 @@ function CourseDetailsPage() {
 /* ========== COMPONENTS ========== */
 
 function Breadcrumb({ category, title }: { category: string; title: string }) {
+  const { t } = useTranslation();
   return (
     <nav className="flex items-center gap-2 text-xs sm:text-sm text-gray-400 animate-fade-in overflow-hidden">
       <Link to="/courses" className="hover:text-brand transition-colors shrink-0">
-        Courses
+        {t("nav.courses")}
       </Link>
       <ChevronRight className="w-3 h-3 shrink-0" />
       <span className="text-gray-500 truncate min-w-0">{category}</span>
@@ -122,6 +131,7 @@ function Breadcrumb({ category, title }: { category: string; title: string }) {
 }
 
 function CourseTitle({ course }: { course: Course }) {
+  const { t } = useTranslation();
   return (
     <div className="animate-fade-in">
       <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold leading-[1.08] text-ink tracking-tight">
@@ -149,12 +159,12 @@ function CourseTitle({ course }: { course: Course }) {
 
         <Divider />
         <span className="flex items-center gap-1.5">
-          <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> {course.lessonsCount} Lessons
+          <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> {course.lessonsCount} {t("courseDetail.lessons")}
         </span>
 
         <Divider />
         <span className="flex items-center gap-1.5">
-          <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> {course.assignmentsCount} Assignments
+          <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> {course.assignmentsCount} {t("courseDetail.assignments")}
         </span>
 
         <Divider />
@@ -179,25 +189,27 @@ function PreviewCard({ image }: { image: string }) {
 }
 
 function AboutSection({ description }: { description: string }) {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
   return (
     <section ref={ref} className="animate-on-view">
-      <h2 className="text-xl font-semibold text-ink">About This Course</h2>
+      <h2 className="text-xl font-semibold text-ink">{t("courseDetail.about")}</h2>
       <p className="mt-3 text-sm text-muted-foreground leading-[1.75] max-w-3xl whitespace-pre-line">{description}</p>
     </section>
   );
 }
 
 function OutcomesSection({ items }: { items: string[] }) {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
   return (
     <section ref={ref} className="animate-on-view">
       <h2 className="text-xl font-semibold text-ink">
-        After Completing This Course You Will Be Able To
+        {t("courseDetail.outcomes")}
       </h2>
       <ul className="mt-4 space-y-2.5">
         {items.map((item) => (
@@ -217,6 +229,7 @@ function OutcomesSection({ items }: { items: string[] }) {
 }
 
 function RequirementsSection({ items }: { items: string[] }) {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
@@ -224,7 +237,7 @@ function RequirementsSection({ items }: { items: string[] }) {
 
   return (
     <section ref={ref} className="animate-on-view">
-      <h2 className="text-xl font-semibold text-ink">Requirements</h2>
+      <h2 className="text-xl font-semibold text-ink">{t("courseDetail.requirements")}</h2>
       <ul className="mt-4 space-y-2.5">
         {items.map((item) => (
           <li key={item} className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -238,6 +251,7 @@ function RequirementsSection({ items }: { items: string[] }) {
 }
 
 function LearningSupportSection({ items }: { items: string[] }) {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
@@ -246,7 +260,7 @@ function LearningSupportSection({ items }: { items: string[] }) {
   return (
     <section ref={ref} className="animate-on-view">
       <h2 className="text-xl font-semibold text-ink">
-        Structured Learning Support Every Level
+        {t("courseDetail.support")}
       </h2>
       <ul className="mt-4 space-y-2.5">
         {items.map((item) => (
@@ -266,6 +280,7 @@ function LearningSupportSection({ items }: { items: string[] }) {
 }
 
 function CurriculumSection({ sections }: { sections: CurriculumSection[] }) {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
@@ -279,9 +294,9 @@ function CurriculumSection({ sections }: { sections: CurriculumSection[] }) {
 
   return (
     <section ref={ref} className="animate-on-view">
-      <h2 className="text-xl font-semibold text-ink">Course Curriculum</h2>
+      <h2 className="text-xl font-semibold text-ink">{t("courseDetail.curriculum")}</h2>
       <p className="mt-1 text-sm text-muted-foreground">
-        {sections.length} sections &middot; {totalLessons} lessons &middot; {progress}% unlocked
+        {sections.length} {t("courseDetail.sections")} &middot; {totalLessons} {t("courseDetail.lessons_lower")} &middot; {progress}% {t("courseDetail.unlocked")}
       </p>
 
       {progress > 0 && (
@@ -346,6 +361,7 @@ function CurriculumSection({ sections }: { sections: CurriculumSection[] }) {
 }
 
 function ReviewsSection({ reviews }: { reviews: Review[] }) {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
@@ -355,10 +371,10 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
 
   return (
     <section ref={ref} className="animate-on-view">
-      <h2 className="text-xl font-semibold text-ink">Student Reviews</h2>
+      <h2 className="text-xl font-semibold text-ink">{t("courseDetail.reviews")}</h2>
       <p className="mt-1 text-sm text-muted-foreground">
-        <span className="text-amber-500 font-medium">{avgRating}</span> out of 5 &middot;{" "}
-        {reviews.length} reviews
+        <span className="text-amber-500 font-medium">{avgRating}</span> {t("courseDetail.reviewSummary")} &middot;{" "}
+        {reviews.length} {t("courseDetail.reviews").toLowerCase()}
       </p>
       <div className="mt-4 grid md:grid-cols-2 gap-4">
         {reviews.map((review) => (
@@ -394,6 +410,7 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
 }
 
 function SidebarCard({ course }: { course: Course }) {
+  const { t } = useTranslation();
   return (
     <div className="bg-white rounded-2xl p-5 sm:p-8 border border-border">
       <div className="flex items-baseline gap-3">
@@ -404,24 +421,24 @@ function SidebarCard({ course }: { course: Course }) {
       <div className="mt-5 space-y-3 text-sm text-muted-foreground">
         <div className="flex items-center gap-3">
           <BookOpen className="w-4 h-4 text-brand shrink-0" />
-          <span>In-person + Online</span>
+          <span>{t("courseDetail.format")}</span>
         </div>
         <div className="flex items-center gap-3">
           <Clock className="w-4 h-4 text-brand shrink-0" />
-          <span>8 weeks per level</span>
+          <span>{t("courseDetail.duration")}</span>
         </div>
         <div className="flex items-center gap-3">
           <Users className="w-4 h-4 text-brand shrink-0" />
-          <span>Max 12 students per cohort</span>
+          <span>{t("courseDetail.cohortSize")}</span>
         </div>
       </div>
 
       <div className="mt-5 pt-5 border-t border-border">
         <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
-          Student journey
+          {t("courseDetail.studentJourney")}
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Each level is independent but structured for seamless progression. Students must pass an end-of-level test before advancing.
+          {t("courseDetail.journeyDescription")}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {["A1", "A2", "B1", "B2", "C1", "C2"].map((level) => (
@@ -437,19 +454,13 @@ function SidebarCard({ course }: { course: Course }) {
 
       <div className="mt-5 pt-5 border-t border-border">
         <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground mb-3">
-          Deliverables
+          {t("courseDetail.deliverables")}
         </p>
         <ul className="space-y-2">
-          {[
-            "Session recordings",
-            "PDF practice sheets",
-            "Telegram group",
-            "End-of-level test",
-            "Completion certificate",
-          ].map((item) => (
-            <li key={item} className="flex items-center gap-2 text-xs text-muted-foreground">
+          {course.deliverables.map((item) => (
+            <li key={item.title} className="flex items-center gap-2 text-xs text-muted-foreground">
               <Check className="w-3 h-3 text-brand shrink-0" strokeWidth={3} />
-              {item}
+              {item.title}
             </li>
           ))}
         </ul>
@@ -458,7 +469,7 @@ function SidebarCard({ course }: { course: Course }) {
       <RegisterDialog
         trigger={
           <button className="mt-5 w-full h-14 bg-brand hover:bg-brand/90 text-white font-medium text-base rounded-xl transition-colors active:scale-[0.98]">
-            Enroll Today
+            {t("courseDetail.enroll")}
           </button>
         }
       />
@@ -467,6 +478,7 @@ function SidebarCard({ course }: { course: Course }) {
 }
 
 function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
+  const { t } = useTranslation();
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-border px-4 sm:px-6 py-3 sm:py-4 flex items-center gap-3 sm:gap-4">
       <div className="flex-1 min-w-0">
@@ -478,7 +490,7 @@ function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
       <RegisterDialog
         trigger={
           <button className="h-12 px-8 bg-brand hover:bg-brand/90 text-white font-medium text-sm rounded-xl transition-colors active:scale-[0.98] shrink-0">
-            Enroll Today
+            {t("courseDetail.enroll")}
           </button>
         }
       />
@@ -487,10 +499,11 @@ function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
 }
 
 function InstructorSection({ instructor }: { instructor: Course["instructor"] }) {
+  const { t } = useTranslation();
   if (!instructor.name) return null;
   return (
     <div className="bg-white rounded-2xl p-5 sm:p-8 border border-border">
-      <h3 className="text-base font-semibold text-ink">About The Instructor</h3>
+      <h3 className="text-base font-semibold text-ink">{t("courseDetail.instructor")}</h3>
 
       <div className="mt-5 flex flex-col items-center text-center">
         <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand/20 via-purple-100 to-blue-100 flex items-center justify-center overflow-hidden border-2 border-brand/20">
