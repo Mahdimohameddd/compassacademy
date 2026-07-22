@@ -218,7 +218,7 @@ function PreviewCard({ image }: { image: string }) {
       <img
         src={image}
         alt="Course preview"
-        className="w-full h-auto max-h-[200px] sm:max-h-[260px] lg:h-[420px] lg:max-h-none object-contain lg:object-cover transition-transform duration-700"
+        className="w-full h-auto object-cover transition-transform duration-700"
       />
     </div>
   );
