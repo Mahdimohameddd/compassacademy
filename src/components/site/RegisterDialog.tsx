@@ -1,7 +1,6 @@
 import { useState, useCallback, type ReactNode, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import popupImg from "@/assets/popup.webp";
 import logoImg from "@/assets/logooc.svg";
 
 export function RegisterDialog({
@@ -45,18 +44,7 @@ export function RegisterDialog({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-4xl w-full p-0 overflow-hidden border-border rounded-md gap-0 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0">
-        <div className="grid md:grid-cols-2">
-          {/* Left — image */}
-          <div className="hidden md:block">
-            <img
-              src={popupImg}
-              alt=""
-              className="w-full h-auto block"
-            />
-          </div>
-
-          {/* Right — form */}
-          <div className="p-8 md:p-10">
+        <div className="p-8 md:p-10">
             {/* Logo on mobile */}
             <div className="md:hidden flex justify-center mb-4">
               <img src={logoImg} alt="Compass Academy" className="h-8 w-auto" />
@@ -133,7 +121,6 @@ export function RegisterDialog({
               </>
             )}
           </div>
-        </div>
       </DialogContent>
     </Dialog>
   );
