@@ -312,26 +312,26 @@ const spanishCourse: Course = {
   slug: "spanish",
   title: "Spanish Course",
   category: "Spanish Courses",
-  tagline: "Learn Spanish the practical way — from A1 to C1.",
+  tagline: "Learn Spanish the practical way — A1 + A2.",
   description:
-    "Learning Spanish has never been easier. At The Compass Academy, you'll follow a CEFR-based program (A1–C1) designed to help you speak, understand, read, and write Spanish with confidence through practical lessons and real conversations.",
+    "Learning Spanish has never been easier. At The Compass Academy, you'll follow a CEFR-based program (A1 + A2) designed to help you speak, understand, read, and write Spanish with confidence through practical lessons and real conversations.",
   longDescription:
-    "Learning Spanish has never been easier. At The Compass Academy, you'll follow a CEFR-based program (A1–C1) designed to help you speak, understand, read, and write Spanish with confidence through practical lessons and real conversations.\n\n• CEFR curriculum (A1–C1)\n• Focus on speaking from day one\n• Reading, writing & listening practice\n• Intensive 6-week levels\n• Small groups (max. 12 students)\n• Experienced and supportive teachers\n• Daily follow-up, quizzes & personalized feedback\n• Interactive learning with real-life situations",
-  price: 4500,
+    "Learning Spanish has never been easier. At The Compass Academy, you'll follow a CEFR-based program (A1 + A2) designed to help you speak, understand, read, and write Spanish with confidence through practical lessons and real conversations.\n\n• CEFR curriculum (A1 + A2)\n• Focus on speaking from day one\n• Reading, writing & listening practice\n• 3-month program, 2 sessions per week\n• Small groups (max. 12 students)\n• Experienced and supportive teachers\n• Daily follow-up, quizzes & personalized feedback\n• Interactive learning with real-life situations",
+  price: 9500,
   oldPrice: 0,
-  duration: "6 weeks per level",
-  totalDuration: "100+ hours",
-  levels: "A1 — C1",
+  duration: "3 months",
+  totalDuration: "48 hours",
+  levels: "A1 + A2",
   image: spanishImg,
   available: true,
-  sessionsPerWeek: 5,
-  sessionDuration: "1h30",
+  sessionsPerWeek: 2,
+  sessionDuration: "2h",
   format: "In-person + Online",
   location: "Algiers + Live Zoom",
   cohortSize: "Max 12 students",
   rating: 4.9,
   reviewsCount: 0,
-  lessonsCount: 100,
+  lessonsCount: 48,
   assignmentsCount: 0,
   highlights: [
     "Speak Spanish confidently in everyday conversations",
@@ -339,7 +339,7 @@ const spanishCourse: Course = {
     "Read and write with confidence",
     "Build a strong vocabulary and grammar foundation",
     "Communicate naturally while traveling, studying, or working",
-    "Progress through the CEFR levels toward fluency",
+    "Complete A1 and A2 levels in one program",
   ],
   learningSupport: [
     "Daily grammar & vocabulary practice",
@@ -358,7 +358,7 @@ const spanishCourse: Course = {
   features: [
     "Spanish language",
     "Exercises & quizzes",
-    "Beginner to advanced",
+    "Beginner to elementary",
     "Mobile & desktop access",
     "Lifetime access",
     "Completion certificate",
@@ -382,7 +382,7 @@ const spanishCourse: Course = {
     },
     {
       title: "Completion certificate",
-      body: "Issued after passing the final test. Confirms level completion (A1 through C1).",
+      body: "Issued after passing the final test. Confirms level completion (A1 + A2).",
     },
   ],
   weeklyBreakdown: [
@@ -394,9 +394,6 @@ const spanishCourse: Course = {
   curriculum: [
     { level: "A1", name: "Beginner", focus: "Greetings, basic grammar, present tense, everyday vocabulary." },
     { level: "A2", name: "Elementary", focus: "Past & future tenses, short conversations, travel and daily life." },
-    { level: "B1", name: "Intermediate", focus: "Express opinions, handle most situations, write structured texts." },
-    { level: "B2", name: "Upper-Intermediate", focus: "Fluent discussion, nuanced grammar, professional & academic Spanish." },
-    { level: "C1", name: "Advanced", focus: "Complex topics, idiomatic speech, advanced writing and presentations." },
   ],
   sections: [
     {
@@ -495,7 +492,7 @@ const spanishCourse: Course = {
     },
     {
       q: "Can I pay per level?",
-      a: "Yes. The price covers a full 6-week level. There's no long-term commitment — you can stop or pause between levels.",
+      a: "Yes. The price covers the full A1 + A2 program (3 months). There's no long-term commitment — you can stop or pause after completion.",
     },
     {
       q: "When do new cohorts start?",
@@ -503,7 +500,7 @@ const spanishCourse: Course = {
     },
     {
       q: "What certificate will I receive?",
-      a: "After passing the end-of-level test, you receive a certificate confirming your level completion — from A1 through C1.",
+      a: "After passing the end-of-level test, you receive a certificate confirming your level completion — A1 and A2.",
     },
     {
       q: "Is the course in-person or online?",

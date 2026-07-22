@@ -45,7 +45,7 @@ export const CourseCard = memo(function CourseCard({ course }: { course: Course 
               {t("courseDetail.price")}
             </p>
             <p className="mt-1 text-lg sm:text-xl font-semibold text-ink">
-              4,500{" "}
+              {course.price.toLocaleString()}{" "}
               <span className="text-xs sm:text-sm font-normal text-muted-foreground">DA</span>
             </p>
           </div>

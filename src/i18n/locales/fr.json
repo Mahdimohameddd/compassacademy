@@ -314,12 +314,12 @@
     "spanish": {
       "title": "Cours d'Espagnol",
       "category": "Cours d'Espagnol",
-      "tagline": "Apprenez l'espagnol de pratique — du A1 au C1.",
-      "description": "Apprendre l'espagnol n'a jamais été aussi facile. Chez Compass Academy, vous suivrez un programme basé sur le CECRL (A1–C1) conçu pour vous aider à parler, comprendre, lire et écrire en espagnol avec confiance grâce à des leçons pratiques et de vraies conversations.",
-      "longDescription": "Apprendre l'espagnol n'a jamais été aussi facile. Chez Compass Academy, vous suivrez un programme basé sur le CECRL (A1–C1) conçu pour vous aider à parler, comprendre, lire et écrire en espagnol avec confiance grâce à des leçons pratiques et de vraies conversations.\n\n• Programme CECRL (A1–C1)\n• Accent sur l'oral dès le premier jour\n• Pratique de lecture, écriture et écoute\n• Niveaux intensifs de 6 semaines\n• Petits groupes (max. 12 étudiants)\n• Enseignants expérimentés et bienveillants\n• Suivi quotidien, quiz et retours personnalisés\n• Apprentissage interactif avec des situations réelles",
-      "duration": "6 semaines par niveau",
-      "totalDuration": "100+ heures",
-      "levels": "A1 — C1",
+      "tagline": "Apprenez l'espagnol de pratique — A1 + A2.",
+      "description": "Apprendre l'espagnol n'a jamais été aussi facile. Chez Compass Academy, vous suivrez un programme basé sur le CECRL (A1 + A2) conçu pour vous aider à parler, comprendre, lire et écrire en espagnol avec confiance grâce à des leçons pratiques et de vraies conversations.",
+      "longDescription": "Apprendre l'espagnol n'a jamais été aussi facile. Chez Compass Academy, vous suivrez un programme basé sur le CECRL (A1 + A2) conçu pour vous aider à parler, comprendre, lire et écrire en espagnol avec confiance grâce à des leçons pratiques et de vraies conversations.\n\n• Programme CECRL (A1 + A2)\n• Accent sur l'oral dès le premier jour\n• Pratique de lecture, écriture et écoute\n• Programme de 3 mois, 2 sessions par semaine\n• Petits groupes (max. 12 étudiants)\n• Enseignants expérimentés et bienveillants\n• Suivi quotidien, quiz et retours personnalisés\n• Apprentissage interactif avec des situations réelles",
+      "duration": "3 mois",
+      "totalDuration": "48 heures",
+      "levels": "A1 + A2",
       "format": "En présentiel + en ligne",
       "location": "Alger + Zoom en direct",
       "cohortSize": "Maximum 12 étudiants",
@@ -329,7 +329,7 @@
         "Lisez et écrivez avec confiance",
         "Construisez une base solide de vocabulaire et grammaire",
         "Communiquez naturellement en voyageant, étudiant ou travaillant",
-        "Progressez à travers les niveaux CECRL vers la fluidité"
+        "Complétez les niveaux A1 et A2 en un seul programme"
       ],
       "learningSupport": [
         "Pratique quotidienne de grammaire et vocabulaire",
@@ -348,7 +348,7 @@
       "features": [
         "Langue espagnole",
         "Exercices et quiz",
-        "Débutant à avancé",
+        "Débutant à élémentaire",
         "Accès mobile et desktop",
         "Accès à vie",
         "Certificat de completion"
@@ -358,7 +358,7 @@
         { "title": "Fiches d'exercices PDF", "body": "Tâches de vocabulaire, grammaire et expression orale partagées via Google Classroom. Format imprimable et numérique." },
         { "title": "Groupe Telegram", "body": "Un groupe dédié par cohorte. Communication avec le professeur, Q&A, partage de fichiers et mises à jour." },
         { "title": "Test de fin de niveau", "body": "Évaluation finale par niveau — teste l'oral, la grammaire, le vocabulaire et la compréhension." },
-        { "title": "Certificat de completion", "body": "Délivré après réussite du test final. Confirme le niveau atteint (A1 à C1)." }
+        { "title": "Certificat de completion", "body": "Délivré après réussite du test final. Confirme le niveau atteint (A1 + A2)." }
       ],
       "weeklyBreakdown": [
         { "label": "Expression orale", "percent": 35 },
@@ -368,10 +368,7 @@
       ],
       "curriculum": [
         { "level": "A1", "name": "Débutant", "focus": "Salutations, grammaire de base, présent, vocabulaire quotidien." },
-        { "level": "A2", "name": "Élémentaire", "focus": "Passé et futur, conversations courtes, voyages et vie quotidienne." },
-        { "level": "B1", "name": "Intermédiaire", "focus": "Exprimer des opinions, gérer la plupart des situations, rédiger des textes structurés." },
-        { "level": "B2", "name": "Intermédiaire supérieur", "focus": "Discussion fluide, grammaire nuancée, espagnol professionnel et académique." },
-        { "level": "C1", "name": "Avancé", "focus": "Sujets complexes, expressions idiomatiques, rédaction avancée et présentations." }
+        { "level": "A2", "name": "Élémentaire", "focus": "Passé et futur, conversations courtes, voyages et vie quotidienne." }
       ],
       "sections": [
         { "title": "Orientation et placement", "lessons": [{ "title": "Bienvenue à Compass Academy", "duration": "10:00" }, { "title": "Placement CECRL et parcours d'apprentissage", "duration": "15:00" }, { "title": "Plateforme d'apprentissage et ressources", "duration": "20:00" }] },
@@ -396,9 +393,9 @@
       "faq": [
         { "q": "Comment connaître mon niveau de départ ?", "a": "Chaque nouvel étudiant passe un test de placement gratuit avant l'inscription — oral + écrit — pour commencer au bon niveau." },
         { "q": "Que se passe-t-il si je manque une session ?", "a": "Toutes les sessions sont enregistrées et partagées via Google Drive sous 24 heures. Les fiches d'exercices restent disponibles pendant tout le niveau." },
-        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre un niveau complet de 6 semaines. Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause entre les niveaux." },
+        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre le programme complet A1 + A2 (3 mois). Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause après l'achèvement." },
         { "q": "Quand commencent les nouveaux groupes ?", "a": "De nouveaux groupes commencent chaque mois. Contactez-nous via le formulaire d'inscription et nous vous enverrons les prochaines dates." },
-        { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — du A1 au C1." },
+        { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — A1 et A2." },
         { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Les deux. Les sessions ont lieu en présentiel à Alger et sont simultanément diffusées via Zoom. Vous pouvez assister de l'une ou l'autre manière." }
       ]
     }
