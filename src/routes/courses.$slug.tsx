@@ -21,7 +21,7 @@ import { getCourse } from "@/lib/courses";
 import { useLocalizedCourse } from "@/lib/useLocalizedCourse";
 import type { Course, Review, CurriculumSection } from "@/lib/courses";
 
-const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+const LEVELS_ALL = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 const STAR_COUNTS = [0, 1, 2, 3, 4];
 
 export const Route = createFileRoute("/courses/$slug")({
@@ -420,22 +420,22 @@ function SidebarCard({ course }: { course: Course }) {
   return (
     <div className="bg-white rounded-2xl p-5 sm:p-8 border border-border">
       <div className="flex items-baseline gap-3">
-        <span className="text-3xl font-semibold text-brand">4,500</span>
+        <span className="text-3xl font-semibold text-brand">{course.price.toLocaleString()}</span>
         <span className="text-sm text-muted-foreground">DA</span>
       </div>
 
       <div className="mt-5 space-y-3 text-sm text-muted-foreground">
         <div className="flex items-center gap-3">
           <BookOpen className="w-4 h-4 text-brand shrink-0" />
-          <span>{t("courseDetail.format")}</span>
+          <span>{course.format}</span>
         </div>
         <div className="flex items-center gap-3">
           <Clock className="w-4 h-4 text-brand shrink-0" />
-          <span>{t("courseDetail.duration")}</span>
+          <span>{course.duration}</span>
         </div>
         <div className="flex items-center gap-3">
           <Users className="w-4 h-4 text-brand shrink-0" />
-          <span>{t("courseDetail.cohortSize")}</span>
+          <span>{course.cohortSize}</span>
         </div>
       </div>
 
@@ -447,7 +447,7 @@ function SidebarCard({ course }: { course: Course }) {
           {t("courseDetail.journeyDescription")}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
-          {LEVELS.map((level) => (
+          {LEVELS_ALL.filter((l) => course.levels.includes(l)).map((level) => (
             <span
               key={level}
               className="px-3 py-1 text-xs font-medium bg-brand/10 text-brand rounded-full"
@@ -489,7 +489,7 @@ function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-border px-4 sm:px-6 py-3 sm:py-4 flex items-center gap-3 sm:gap-4">
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline gap-2">
-          <span className="text-xl font-semibold text-brand">4,500</span>
+          <span className="text-xl font-semibold text-brand">{course.price.toLocaleString()}</span>
           <span className="text-sm text-muted-foreground">DA</span>
         </div>
       </div>

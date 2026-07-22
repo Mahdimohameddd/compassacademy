@@ -159,12 +159,12 @@
       "tagline": "Parlez avec confiance — du A1 au C1.",
       "description": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.",
       "longDescription": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.\n\n• Programme basé sur le CECRL (A1–C1)\n• Maîtriser l'expression orale, l'écoute, la lecture et l'écriture\n• Progression intensive de 6 semaines par niveau\n• Petits groupes (maximum 12 étudiants) pour une attention personnalisée\n• Enseignants d'anglais professionnels et expérimentés\n• Méthodes d'apprentissage interactives et actives\n• Suivi quotidien par l'enseignant et retours personnalisés\n• Quiz réguliers et évaluations de progression\n• Pratique de communication réelle dans chaque session\n• Environnement bienveillant axé sur la confiance et la fluidité",
-      "duration": "6 semaines par niveau",
+      "duration": "8 semaines par niveau",
       "totalDuration": "100+ heures",
       "levels": "A1 — C1",
       "format": "En présentiel + en ligne",
       "location": "Alger + Zoom en direct",
-      "cohortSize": "Maximum 12 étudiants",
+      "cohortSize": "Maximum 12 étudiants par cohorte",
       "highlights": [
         "Parler anglais avec confiance dans les situations quotidiennes et professionnelles",
         "Comprendre l'anglais parlé plus facilement",
@@ -379,8 +379,8 @@
         { "title": "Évaluation et progression CECRL", "lessons": [{ "title": "Quiz quotidiens", "duration": "15:00" }, { "title": "Évaluation mi-niveau", "duration": "20:00" }, { "title": "Évaluation de l'expression orale", "duration": "20:00" }, { "title": "Examen final de niveau", "duration": "40:00" }, { "title": "Retours personnalisés et orientation", "duration": "25:00" }] }
       ],
       "instructor": {
-        "name": "Équipe Compass Academy",
-        "title": "Enseignants d'espagnol",
+        "name": "G.Amina",
+        "title": "Enseignante d'espagnol",
         "bio": "Nos enseignants d'espagnol sont des professionnels certifiés avec des années d'expérience dans l'enseignement de l'espagnol aux arabophones. Ils utilisent des méthodes communicatives axées sur l'application réelle.",
         "experience": "Enseignants certifiés",
         "students": "Communauté grandissante",

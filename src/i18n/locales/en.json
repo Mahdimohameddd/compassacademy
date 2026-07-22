@@ -159,12 +159,12 @@
       "tagline": "Speak with confidence — from A1 to C1.",
       "description": "At The Compass Academy, students don't just study English — they live the language. Our CEFR-based program (A1–C1) is designed to help learners master speaking, listening, reading, and writing through practical communication, intensive learning, and continuous guidance from experienced instructors.",
       "longDescription": "At The Compass Academy, students don't just study English — they live the language. Our CEFR-based program (A1–C1) is designed to help learners master speaking, listening, reading, and writing through practical communication, intensive learning, and continuous guidance from experienced instructors.\n\n• CEFR-based curriculum (A1–C1)\n• Master speaking, listening, reading, and writing\n• Intensive 6-week level progression\n• Small groups (maximum 12 students) for personalized attention\n• Professional and experienced English teachers\n• Interactive and active learning methods\n• Daily teacher follow-up and personalized feedback\n• Regular quizzes and progress assessments\n• Real-life communication practice in every session\n• Supportive environment focused on confidence and fluency",
-      "duration": "6 weeks per level",
+      "duration": "8 weeks per level",
       "totalDuration": "100+ hours",
       "levels": "A1 — C1",
       "format": "In-person + Online",
       "location": "Algiers + Live Zoom",
-      "cohortSize": "Max 12 students",
+      "cohortSize": "Max 12 students per cohort",
       "highlights": [
         "Speak English confidently in everyday and professional situations",
         "Understand spoken English with greater ease",
@@ -379,8 +379,8 @@
         { "title": "Assessment & CEFR Progression", "lessons": [{ "title": "Daily Quizzes", "duration": "15:00" }, { "title": "Mid-Level Assessment", "duration": "20:00" }, { "title": "Speaking Evaluation", "duration": "20:00" }, { "title": "Final Level Examination", "duration": "40:00" }, { "title": "Personalized Feedback & Next Level Guidance", "duration": "25:00" }] }
       ],
       "instructor": {
-        "name": "Compass Academy Team",
-        "title": "Spanish Language Instructors",
+        "name": "G.Amina",
+        "title": "Spanish Language Instructor",
         "bio": "Our Spanish instructors are certified professionals with years of experience teaching Spanish to Arabic speakers. They use communicative methods focused on real-world application.",
         "experience": "Certified instructors",
         "students": "Growing community",
