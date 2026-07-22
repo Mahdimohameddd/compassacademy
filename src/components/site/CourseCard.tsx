@@ -1,15 +1,16 @@
+import { memo, useCallback } from "react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import type { Course } from "@/lib/courses";
 import { RegisterDialog } from "./RegisterDialog";
 
-export function CourseCard({ course }: { course: Course }) {
+export const CourseCard = memo(function CourseCard({ course }: { course: Course }) {
   const { t } = useTranslation();
-  const tc = (key: string, fallback: string) => {
+  const tc = useCallback((key: string, fallback: string) => {
     const val = t(`course.${course.slug}.${key}`, { defaultValue: fallback });
     return val || fallback;
-  };
+  }, [t, course.slug]);
   return (
     <article className="bg-card border border-border p-5 sm:p-6 md:p-8 rounded-3xl transition-all duration-500 hover:border-brand/40 animate-fade-up overflow-hidden">
       {/* Breadcrumb */}
@@ -23,16 +24,11 @@ export function CourseCard({ course }: { course: Course }) {
         <span className="text-brand font-medium">{tc("title", course.title)}</span>
       </nav>
 
-      {/* Title */}
-      <h3 className="mt-4 sm:mt-5 text-xl sm:text-2xl md:text-[28px] font-semibold text-ink leading-tight tracking-tight">
-        {tc("title", course.title)} — <span className="font-fancy text-brand">{tc("tagline", course.tagline)}</span>
-      </h3>
-
       {/* Media */}
       <Link
         to="/courses/$slug"
         params={{ slug: course.slug }}
-        className="mt-5 sm:mt-6 block rounded-2xl overflow-hidden border border-border group"
+        className="mt-4 sm:mt-5 block rounded-2xl overflow-hidden border border-border group"
       >
         <img
           src={course.image}
@@ -41,6 +37,11 @@ export function CourseCard({ course }: { course: Course }) {
           loading="lazy"
         />
       </Link>
+
+      {/* Title under image */}
+      <h3 className="mt-4 sm:mt-5 text-xl sm:text-2xl md:text-[28px] font-semibold text-ink leading-tight tracking-tight">
+        English Course
+      </h3>
 
       {/* Description */}
       <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed line-clamp-2">
@@ -82,4 +83,4 @@ export function CourseCard({ course }: { course: Course }) {
       )}
     </article>
   );
-}
+});

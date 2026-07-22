@@ -5,8 +5,6 @@ import { Layout } from "@/components/site/Layout";
 import { CourseCard } from "@/components/site/CourseCard";
 import { SearchBar } from "@/components/site/SearchBar";
 import { courses } from "@/lib/courses";
-import ppImage from "@/assets/pp.webp";
-import blackImage from "@/assets/Black.webp";
 import dodoBg from "@/assets/dodo.webp";
 
 export const Route = createFileRoute("/")({
@@ -41,9 +39,8 @@ function HomePage() {
           className="lg:hidden absolute inset-0 bg-cover bg-center opacity-10"
           style={{ backgroundImage: `url(${dodoBg})` }}
         />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-10 py-12 sm:py-24 md:py-36 grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-          {/* Left: Text */}
-          <div className="lg:col-span-7">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10 py-12 sm:py-24 md:py-36">
+          <div className="max-w-2xl mx-auto text-center">
             <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-brand">
               {t("home.hero.label")}
             </p>
@@ -54,7 +51,7 @@ function HomePage() {
               <span className="font-fancy text-brand">{t("home.hero.tagline")}</span>
               {" "}{t("home.hero.description")}
             </p>
-            <div className="mt-8 sm:mt-12 flex flex-wrap items-center gap-4 sm:gap-6">
+            <div className="mt-8 sm:mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
               <Link
                 to="/courses"
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-foreground text-background hover:bg-brand transition-colors text-sm font-medium rounded-sm"
@@ -72,14 +69,6 @@ function HomePage() {
             <div className="mt-6 md:hidden">
               <SearchBar variant="hero" />
             </div>
-          </div>
-          {/* Right: Image */}
-          <div className="lg:col-span-5 overflow-hidden flex justify-center">
-            <img
-              src={ppImage}
-              alt="Compass Academy"
-              className="w-full max-w-full h-auto"
-            />
           </div>
         </div>
       </section>
@@ -127,18 +116,11 @@ function HomePage() {
 
       {/* Philosophy */}
       <section className="border-t border-border overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 sm:py-24 md:py-32 grid lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-          <div className="lg:col-span-4 space-y-4 sm:space-y-6 overflow-hidden">
-            <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              {t("home.philosophy.label")}
-            </p>
-            <img
-              src={blackImage}
-              alt="Compass Academy"
-              className="w-full max-w-full h-auto rounded-2xl"
-            />
-          </div>
-          <div className="lg:col-span-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 sm:py-24 md:py-32">
+          <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            {t("home.philosophy.label")}
+          </p>
+          <div className="mt-8 sm:mt-12">
             <p className="font-display text-xl sm:text-3xl md:text-4xl leading-[1.25] text-ink">
               {t("home.philosophy.text")}
             </p>

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo, useCallback, memo } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { Search } from "lucide-react";
@@ -6,23 +6,22 @@ import { courses } from "@/lib/courses";
 
 type Variant = "header" | "hero";
 
-export function SearchBar({ variant = "header" }: { variant?: Variant }) {
+export const SearchBar = memo(function SearchBar({ variant = "header" }: { variant?: Variant }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const results = query.trim()
-    ? courses.filter((c) => {
-        const q = query.toLowerCase();
-        return (
-          c.title.toLowerCase().includes(q) ||
-          c.tagline.toLowerCase().includes(q) ||
-          c.description.toLowerCase().includes(q)
-        );
-      })
-    : [];
+  const results = useMemo(() => {
+    if (!query.trim()) return [];
+    const q = query.toLowerCase();
+    return courses.filter((c) =>
+      c.title.toLowerCase().includes(q) ||
+      c.tagline.toLowerCase().includes(q) ||
+      c.description.toLowerCase().includes(q)
+    );
+  }, [query]);
 
   const show = focused && results.length > 0;
 
@@ -36,11 +35,11 @@ export function SearchBar({ variant = "header" }: { variant?: Variant }) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  function select(slug: string) {
+  const select = useCallback((slug: string) => {
     setQuery("");
     setFocused(false);
     navigate({ to: "/courses/$slug", params: { slug } });
-  }
+  }, [navigate]);
 
   const isHero = variant === "hero";
 
@@ -94,4 +93,4 @@ export function SearchBar({ variant = "header" }: { variant?: Variant }) {
       )}
     </div>
   );
-}
+});

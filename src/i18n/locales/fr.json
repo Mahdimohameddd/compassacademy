@@ -14,7 +14,7 @@
     "hero": {
       "label": "01 — Compass Academy",
       "heading": "Apprenez une langue. Vivez-la.",
-      "tagline": "Parlez avec confiance — du A1 au C2.",
+      "tagline": "Parlez avec confiance — du A1 au C1.",
       "description": "Programmes structurés, petits groupes et instructeurs dévoués.",
       "exploreCourses": "Explorer les cours",
       "aboutAcademy": "À propos de l'académie"
@@ -111,7 +111,7 @@
       "Certificat de completion"
     ],
     "format": "En présentiel + En ligne",
-    "duration": "8 semaines par niveau",
+    "duration": "6 semaines par niveau",
     "cohortSize": "Maximum 12 étudiants par groupe",
     "sections": "sections",
     "lessons_lower": "leçons",
@@ -156,33 +156,40 @@
     "english": {
       "title": "Cours d'Anglais",
       "category": "Cours d'Anglais",
-      "tagline": "Parlez avec confiance — du A1 au C2.",
-      "description": "Les étudiants de Compass Academy n'étudient pas seulement l'anglais — ils utilisent l'anglais à chaque session. Un programme construit autour de l'usage pratique, de l'application réelle et de la confiance par la pratique orale régulière.",
-      "longDescription": "Les étudiants de Compass Academy n'étudient pas seulement l'anglais — ils utilisent l'anglais à chaque session. Le programme est construit autour de l'usage pratique, de l'application réelle et de la confiance par la pratique orale régulière.\n\n• Utilisation pratique de l'anglais (pas seulement la théorie)\n• Expression orale et communication à chaque session\n• Progression intensive par niveau\n• Participation active des étudiants\n• Application linguistique dans la vie réelle\n• Environnement qui renforce la confiance",
-      "duration": "8 semaines par niveau",
-      "totalDuration": "18h 30m",
-      "levels": "A1 — C2",
+      "tagline": "Parlez avec confiance — du A1 au C1.",
+      "description": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.",
+      "longDescription": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.\n\n• Programme basé sur le CECRL (A1–C1)\n• Maîtriser l'expression orale, l'écoute, la lecture et l'écriture\n• Progression intensive de 6 semaines par niveau\n• Petits groupes (maximum 12 étudiants) pour une attention personnalisée\n• Enseignants d'anglais professionnels et expérimentés\n• Méthodes d'apprentissage interactives et actives\n• Suivi quotidien par l'enseignant et retours personnalisés\n• Quiz réguliers et évaluations de progression\n• Pratique de communication réelle dans chaque session\n• Environnement bienveillant axé sur la confiance et la fluidité",
+      "duration": "6 semaines par niveau",
+      "totalDuration": "100+ heures",
+      "levels": "A1 — C1",
       "format": "En présentiel + en ligne",
       "location": "Alger + Zoom en direct",
       "cohortSize": "Maximum 12 étudiants",
       "highlights": [
-        "Parler avec confiance dans les conversations quotidiennes",
-        "Améliorer la prononciation et la fluidité",
-        "Utiliser un vocabulaire avancé naturellement",
-        "Rédiger des emails professionnels",
-        "Mieux comprendre les locuteurs natifs",
-        "Développer la confiance à l'oral"
+        "Parler anglais avec confiance dans les situations quotidiennes et professionnelles",
+        "Comprendre l'anglais parlé plus facilement",
+        "Lire et comprendre des textes anglais efficacement",
+        "Rédiger des emails, messages et essais clairs et précis",
+        "Utiliser la grammaire et le vocabulaire naturellement",
+        "Communiquer avec fluidité et une prononciation améliorée",
+        "Exprimer ses idées avec confiance dans les conversations et présentations",
+        "Progresser avec confiance à travers les niveaux CECRL jusqu'au C1"
       ],
       "learningSupport": [
-        "Fiches d'exercices — vocabulaire, grammaire et tâches orales partagées via Google Classroom",
-        "Fiches de vocabulaire — termes et phrases clés par niveau pour une révision structurée",
-        "Activités orales — exercices guidés basés sur des scénarios réels"
+        "Fiches de pratique quotidiennes couvrant grammaire, vocabulaire, lecture et écriture",
+        "Listes de vocabulaire organisées par niveau CECRL",
+        "Activités d'expression orale basées sur des situations réelles",
+        "Exercices d'écoute utilisant du contenu anglais authentique",
+        "Quiz quotidiens pour renforcer l'apprentissage",
+        "Retours continus de l'enseignant et suivi de progression",
+        "Évaluations de niveau pour assurer la maîtrise avant de passer au niveau supérieur"
       ],
       "requirements": [
-        "Compréhension de base de l'anglais",
-        "Ordinateur portable ou smartphone",
-        "Connexion Internet",
-        "Motivation à pratiquer quotidiennement"
+        "Connaissances de base en anglais (selon votre niveau actuel)",
+        "Ordinateur portable, tablette ou smartphone",
+        "Connexion Internet stable",
+        "Engagement envers la pratique quotidienne",
+        "Volonté de participer activement pendant les sessions"
       ],
       "features": [
         "Langue anglaise",
@@ -197,7 +204,7 @@
         { "title": "Fiches d'exercices PDF", "body": "Tâches de vocabulaire, grammaire et expression orale partagées via Google Classroom. Format imprimable et numérique." },
         { "title": "Groupe Telegram", "body": "Un groupe dédié par cohorte. Communication avec le professeur, Q&A, partage de fichiers et mises à jour." },
         { "title": "Test de fin de niveau", "body": "Évaluation finale par niveau — teste l'oral, la grammaire, le vocabulaire et la compréhension." },
-        { "title": "Certificat de completion", "body": "Délivré après réussite du test final. Confirme le niveau atteint (A1 à C2)." }
+        { "title": "Certificat de completion", "body": "Délivré après réussite du test final. Confirme le niveau atteint (A1 à C1)." }
       ],
       "weeklyBreakdown": [
         { "label": "Expression orale", "percent": 35 },
@@ -210,52 +217,65 @@
         { "level": "A2", "name": "Élémentaire", "focus": "Passé et futur, conversations courtes, voyages et vie quotidienne." },
         { "level": "B1", "name": "Intermédiaire", "focus": "Exprimer des opinions, gérer la plupart des situations, rédiger des textes structurés." },
         { "level": "B2", "name": "Intermédiaire supérieur", "focus": "Discussion fluide, grammaire nuancée, anglais professionnel et académique." },
-        { "level": "C1", "name": "Avancé", "focus": "Sujets complexes, expressions idiomatiques, rédaction avancée et présentations." },
-        { "level": "C2", "name": "Maîtrise", "focus": "Maîtrise quasi-native — débat, littérature, vocabulaire spécialisé." }
+        { "level": "C1", "name": "Avancé", "focus": "Sujets complexes, expressions idiomatiques, rédaction avancée et présentations." }
       ],
       "sections": [
         {
-          "title": "Introduction à la communication",
+          "title": "Orientation et placement",
           "lessons": [
-            { "title": "Bienvenue et présentation du cours", "duration": "10:00" },
-            { "title": "Pourquoi la communication est importante", "duration": "15:00" },
-            { "title": "Pratique de présentation", "duration": "20:00" }
+            { "title": "Bienvenue à Compass Academy", "duration": "10:00" },
+            { "title": "Placement CECRL et parcours d'apprentissage", "duration": "15:00" },
+            { "title": "Plateforme d'apprentissage et ressources", "duration": "20:00" }
           ]
         },
         {
-          "title": "Essentiels de la prononciation",
+          "title": "Fondamentaux grammaire et vocabulaire",
           "lessons": [
-            { "title": "Sons des voyelles et intonation", "duration": "25:00" },
-            { "title": "Groupes de consonnes", "duration": "20:00" },
-            { "title": "Erreurs de prononciation courantes", "duration": "15:00" },
-            { "title": "Session pratique", "duration": "30:00" }
+            { "title": "Structures grammaticales essentielles", "duration": "25:00" },
+            { "title": "Enrichissement du vocabulaire", "duration": "20:00" },
+            { "title": "Formation de phrases", "duration": "20:00" },
+            { "title": "Expressions du quotidien", "duration": "15:00" },
+            { "title": "Exercices pratiques", "duration": "30:00" }
           ]
         },
         {
-          "title": "Parler avec fluidité",
+          "title": "Expression orale et prononciation",
           "lessons": [
-            { "title": "Développer des réponses naturelles", "duration": "20:00" },
-            { "title": "Relier les idées avec aisance", "duration": "25:00" },
-            { "title": "Gérer les interruptions", "duration": "15:00" },
-            { "title": "Exercices de fluidité", "duration": "30:00" }
+            { "title": "Prononciation et amélioration de l'accent", "duration": "25:00" },
+            { "title": "Parler avec confiance", "duration": "20:00" },
+            { "title": "Pratique de conversation quotidienne", "duration": "20:00" },
+            { "title": "Jeux de rôle interactifs", "duration": "15:00" },
+            { "title": "Communication en situation réelle", "duration": "30:00" }
           ]
         },
         {
-          "title": "Bases de l'anglais des affaires",
+          "title": "Compétences en écoute et lecture",
           "lessons": [
-            { "title": "Rédaction d'emails et étiquette", "duration": "25:00" },
-            { "title": "Langage des réunions et présentations", "duration": "30:00" },
-            { "title": "Phrases de négociation", "duration": "20:00" },
-            { "title": "Projet d'email professionnel", "duration": "45:00" }
+            { "title": "Écouter les locuteurs natifs", "duration": "25:00" },
+            { "title": "Compréhension de lecture", "duration": "20:00" },
+            { "title": "Activités basées sur l'audio", "duration": "15:00" },
+            { "title": "Analyse de textes authentiques", "duration": "20:00" },
+            { "title": "Stratégies de lecture", "duration": "30:00" }
           ]
         },
         {
-          "title": "Conversations avancées",
+          "title": "Écriture et communication",
           "lessons": [
-            { "title": "Débat et discussion", "duration": "30:00" },
-            { "title": "Idiomes et expressions", "duration": "20:00" },
-            { "title": "Nuances culturelles", "duration": "25:00" },
-            { "title": "Préparation à l'évaluation finale", "duration": "40:00" }
+            { "title": "Rédaction d'emails et messages", "duration": "25:00" },
+            { "title": "Grammaire en contexte d'écriture", "duration": "20:00" },
+            { "title": "Rédaction de paragraphes et essais", "duration": "30:00" },
+            { "title": "Communication professionnelle", "duration": "20:00" },
+            { "title": "Pratique d'écriture créative", "duration": "25:00" }
+          ]
+        },
+        {
+          "title": "Évaluation et progression CECRL",
+          "lessons": [
+            { "title": "Quiz quotidiens", "duration": "15:00" },
+            { "title": "Évaluation mi-niveau", "duration": "20:00" },
+            { "title": "Évaluation de l'expression orale", "duration": "20:00" },
+            { "title": "Examen final de niveau", "duration": "40:00" },
+            { "title": "Retours personnalisés et orientation", "duration": "25:00" }
           ]
         }
       ],
@@ -276,9 +296,9 @@
       "faq": [
         { "q": "Comment connaître mon niveau de départ ?", "a": "Chaque nouvel étudiant passe un test de placement gratuit avant l'inscription — oral + écrit — pour commencer au bon niveau." },
         { "q": "Que se passe-t-il si je manque une session ?", "a": "Toutes les sessions sont enregistrées et partagées via Google Drive sous 24 heures. Les fiches d'exercices restent disponibles pendant tout le niveau." },
-        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre un niveau complet de 8 semaines. Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause entre les niveaux." },
+        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre un niveau complet de 6 semaines. Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause entre les niveaux." },
         { "q": "Quand commencent les nouveaux groupes ?", "a": "De nouveaux groupes commencent chaque mois. Contactez-nous via le formulaire d'inscription et nous vous enverrons les prochaines dates." },
-        { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — du A1 au C2." },
+        { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — du A1 au C1." },
         { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Les deux. Les sessions ont lieu en présentiel à Alger et sont simultanément diffusées via Zoom. Vous pouvez assister de l'une ou l'autre manière." }
       ]
     },

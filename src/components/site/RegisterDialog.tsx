@@ -1,9 +1,8 @@
-import { useState, type ReactNode, type FormEvent } from "react";
+import { useState, useCallback, type ReactNode, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import popupImg from "@/assets/popup.webp";
-import logoImg from "@/assets/compass.svg";
-import { supabase } from "@/lib/supabase";
+import logoImg from "@/assets/logooc.svg";
 
 export function RegisterDialog({
   trigger,
@@ -15,11 +14,12 @@ export function RegisterDialog({
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+  const onSubmit = useCallback(async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
     const form = e.currentTarget;
     const data = new FormData(form);
+    const { supabase } = await import("@/lib/supabase");
 
     const { error: err } = await supabase.rpc("insert_registration", {
       p_full_name: data.get("full_name"),
@@ -39,7 +39,7 @@ export function RegisterDialog({
       setOpen(false);
       setSubmitted(false);
     }, 1400);
-  }
+  }, [t]);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

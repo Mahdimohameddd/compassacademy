@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import {
@@ -20,6 +20,9 @@ import { RegisterDialog } from "@/components/site/RegisterDialog";
 import { getCourse } from "@/lib/courses";
 import { useLocalizedCourse } from "@/lib/useLocalizedCourse";
 import type { Course, Review, CurriculumSection } from "@/lib/courses";
+
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+const STAR_COUNTS = [0, 1, 2, 3, 4];
 
 export const Route = createFileRoute("/courses/$slug")({
   head: ({ params }) => {
@@ -101,7 +104,6 @@ function CourseDetailsPage() {
           <div className="lg:flex-none lg:w-[30%] space-y-8">
             <div className="lg:sticky lg:top-24 space-y-8">
               <SidebarCard course={course} />
-              <InstructorSection instructor={course.instructor} />
             </div>
           </div>
         </div>
@@ -285,12 +287,13 @@ function CurriculumSection({ sections }: { sections: CurriculumSection[] }) {
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
-  const totalLessons = sections.reduce((a, s) => a + s.lessons.length, 0);
-  const unlockedLessons = sections.reduce(
-    (a, s) => a + s.lessons.filter((l) => !l.locked).length,
-    0,
-  );
-  const progress = Math.round((unlockedLessons / totalLessons) * 100);
+  const { totalLessons, progress } = useMemo(() => {
+    const total = sections.reduce((a, s) => a + s.lessons.length, 0);
+    const unlocked = sections.reduce(
+      (a, s) => a + s.lessons.filter((l) => !l.locked).length, 0,
+    );
+    return { totalLessons: total, progress: Math.round((unlocked / total) * 100) };
+  }, [sections]);
 
   return (
     <section ref={ref} className="animate-on-view">
@@ -313,7 +316,7 @@ function CurriculumSection({ sections }: { sections: CurriculumSection[] }) {
             <div key={section.title} className="border border-border rounded-xl bg-white overflow-hidden">
               <button
                 type="button"
-                onClick={() => setOpenIndex(isOpen ? null : i)}
+                onClick={() => setOpenIndex((prev) => (prev === i ? null : i))}
                 className="w-full flex items-center justify-between px-3 sm:px-5 py-4 text-left hover:bg-gray-50/50 transition-colors"
               >
                 <div className="flex items-center gap-3 min-w-0">
@@ -365,9 +368,12 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
   const ref = useRef<HTMLDivElement>(null);
   useInView(ref);
 
-  const avgRating = reviews.length
-    ? (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1)
-    : "0";
+  const avgRating = useMemo(() =>
+    reviews.length
+      ? (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1)
+      : "0",
+    [reviews],
+  );
 
   return (
     <section ref={ref} className="animate-on-view">
@@ -387,7 +393,7 @@ function ReviewsSection({ reviews }: { reviews: Review[] }) {
                 <p className="font-medium text-ink text-sm">{review.name}</p>
                 <p className="text-xs text-muted-foreground">{review.profession}</p>
                 <div className="flex items-center gap-0.5 mt-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
+                  {STAR_COUNTS.map((i) => (
                     <Star
                       key={i}
                       className={`w-3 h-3 ${
@@ -441,7 +447,7 @@ function SidebarCard({ course }: { course: Course }) {
           {t("courseDetail.journeyDescription")}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
-          {["A1", "A2", "B1", "B2", "C1", "C2"].map((level) => (
+          {LEVELS.map((level) => (
             <span
               key={level}
               className="px-3 py-1 text-xs font-medium bg-brand/10 text-brand rounded-full"

@@ -3,8 +3,6 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "./locales/en.json";
-import fr from "./locales/fr.json";
-import ar from "./locales/ar.json";
 
 i18n
   .use(LanguageDetector)
@@ -12,8 +10,6 @@ i18n
   .init({
     resources: {
       en: { translation: en },
-      fr: { translation: fr },
-      ar: { translation: ar },
     },
     fallbackLng: "en",
     lng: "en",
@@ -22,6 +18,23 @@ i18n
       caches: ["localStorage"],
     },
   });
+
+const LANG_LOADERS: Record<string, () => Promise<{ default: Record<string, unknown> }>> = {
+  fr: () => import("./locales/fr.json"),
+  ar: () => import("./locales/ar.json"),
+};
+
+const loadLang = async (lang: string) => {
+  if (!i18n.hasResourceBundle(lang, "translation")) {
+    const mod = await LANG_LOADERS[lang]();
+    i18n.addResourceBundle(lang, "translation", mod.default);
+  }
+};
+
+setTimeout(() => {
+  loadLang("fr");
+  loadLang("ar");
+}, 0);
 
 export const RTL_LANGS = ["ar"];
 

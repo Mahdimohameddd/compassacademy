@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/assets/compass.svg";
+import logo from "@/assets/logooc.svg";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { SearchBar } from "./SearchBar";
 import { courses } from "@/lib/courses";
@@ -10,13 +10,14 @@ import { courses } from "@/lib/courses";
 export function Header() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const closeMenu = useCallback(() => setOpen(false), []);
 
-  const nav = [
+  const nav = useMemo(() => [
     { to: "/", label: t("nav.home") },
     { to: "/courses", label: t("nav.courses") },
     { to: "/about", label: t("nav.about") },
     { to: "/contact", label: t("nav.contact") },
-  ] as const;
+  ] as const, [t]);
 
   return (
     <header className="sticky top-0 z-40 bg-background/85 backdrop-blur border-b border-border animate-fade-in">
@@ -105,7 +106,7 @@ export function Header() {
                       to={n.to}
                       className="block text-sm text-muted-foreground hover:text-brand transition-colors"
                       activeProps={{ className: "text-brand font-medium" }}
-                      onClick={() => setOpen(false)}
+                      onClick={closeMenu}
                     >
                       {n.label}
                     </Link>
@@ -118,7 +119,7 @@ export function Header() {
                             to="/courses/$slug"
                             params={{ slug: c.slug }}
                             className="block text-sm text-muted-foreground/70 hover:text-brand transition-colors"
-                            onClick={() => setOpen(false)}
+                            onClick={closeMenu}
                           >
                             {c.title}
                           </Link>
@@ -133,7 +134,7 @@ export function Header() {
                   to={n.to}
                   className="block text-sm text-muted-foreground hover:text-brand transition-colors"
                   activeProps={{ className: "text-brand font-medium" }}
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                 >
                   {n.label}
                 </Link>

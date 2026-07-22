@@ -1,8 +1,11 @@
+import { memo } from "react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import logo from "@/assets/compass.svg";
+import logo from "@/assets/logooc.svg";
 
-export function Footer() {
+const CURRENT_YEAR = new Date().getFullYear();
+
+export const Footer = memo(function Footer() {
   const { t } = useTranslation();
   return (
     <footer className="border-t border-border mt-32">
@@ -44,9 +47,9 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-1 text-xs text-muted-foreground text-center sm:text-left">
-          <span>© {new Date().getFullYear()} {t("footer.copyright")}</span>
+          <span>© {CURRENT_YEAR} {t("footer.copyright")}</span>
         </div>
       </div>
     </footer>
   );
-}
+});
