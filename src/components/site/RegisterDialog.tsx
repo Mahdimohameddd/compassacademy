@@ -21,11 +21,11 @@ export function RegisterDialog({
     const data = new FormData(form);
     const { supabase } = await import("@/lib/supabase");
 
-    const { error: err } = await supabase.rpc("insert_registration", {
-      p_full_name: data.get("full_name"),
-      p_phone: data.get("phone"),
-      p_email: data.get("email"),
-      p_level: data.get("level"),
+    const { error: err } = await supabase.from("registrations").insert({
+      full_name: data.get("full_name"),
+      phone: data.get("phone"),
+      email: data.get("email"),
+      level: data.get("level"),
     });
 
     if (err) {
