@@ -558,14 +558,6 @@ const placeholderCourse: Course = {
 
 export const courses: Course[] = [
   englishCourse,
-  {
-    ...placeholderCourse,
-    slug: "french",
-    title: "French",
-    category: "Languages",
-    tagline: "Coming soon.",
-    available: false,
-  },
   spanishCourse,
 ];
 

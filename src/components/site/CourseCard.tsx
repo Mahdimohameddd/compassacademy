@@ -13,17 +13,6 @@ export const CourseCard = memo(function CourseCard({ course }: { course: Course 
   }, [t, course.slug]);
   return (
     <article className="bg-card border border-border p-5 sm:p-6 md:p-8 rounded-3xl transition-all duration-500 hover:border-brand/40 animate-fade-up overflow-hidden">
-      {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
-        <Link to="/" className="hover:text-foreground transition-colors">
-          <span aria-label="home">⌂</span>
-        </Link>
-        <span>›</span>
-        <span>{tc("category", course.category)}</span>
-        <span>›</span>
-        <span className="text-brand font-medium">{tc("title", course.title)}</span>
-      </nav>
-
       {/* Media */}
       <Link
         to="/courses/$slug"

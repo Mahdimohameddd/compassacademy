@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const { t } = useTranslation();
-  const featured = courses.find((c) => c.slug === "english")!;
+  const featured = courses.filter((c) => c.available);
 
   return (
     <Layout>
@@ -92,25 +92,9 @@ function HomePage() {
           </Link>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 items-start">
-          <CourseCard course={featured} />
-          <div className="lg:pl-12 lg:pt-10">
-            <p className="font-mono-display text-xs uppercase tracking-[0.22em] text-brand">
-              {t("home.featured.method")}
-            </p>
-            <h3 className="mt-4 sm:mt-6 font-display text-2xl sm:text-3xl md:text-4xl leading-tight text-ink">
-              {t("home.featured.methodHeading")}
-            </h3>
-            <p className="mt-4 sm:mt-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
-              {t("home.featured.methodDescription")}
-            </p>
-            <Link
-              to="/courses/$slug"
-              params={{ slug: "english" }}
-              className="mt-6 sm:mt-10 inline-flex items-center gap-2 text-sm font-medium text-foreground border-b border-foreground hover:text-brand hover:border-brand pb-0.5 py-1"
-            >
-              {t("home.featured.viewCourse")} <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+          {featured.map((course) => (
+            <CourseCard key={course.slug} course={course} />
+          ))}
         </div>
       </section>
 
