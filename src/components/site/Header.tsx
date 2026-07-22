@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logooc.svg";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { SearchBar } from "./SearchBar";
 import { courses } from "@/lib/courses";
 
 export function Header() {
@@ -75,13 +74,8 @@ export function Header() {
           })}
         </nav>
 
-        {/* Right: Search + Language + Hamburger */}
+        {/* Right: Language + Hamburger */}
         <div className="flex-1 flex items-center justify-end gap-3">
-          {/* Desktop search */}
-          <div className="hidden md:block">
-            <SearchBar variant="header" />
-          </div>
-
           <LanguageSwitcher />
 
           <button

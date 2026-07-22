@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { CourseCard } from "@/components/site/CourseCard";
-import { SearchBar } from "@/components/site/SearchBar";
 import { courses } from "@/lib/courses";
 import dodoBg from "@/assets/dodo.webp";
 
@@ -91,10 +90,6 @@ function HomePage() {
               >
                 {t("home.hero.aboutAcademy")} <ArrowRight className="w-3.5 h-3.5" />
               </Link>
-            </div>
-            {/* Mobile search */}
-            <div className="mt-6 md:hidden">
-              <SearchBar variant="hero" />
             </div>
           </div>
         </div>
