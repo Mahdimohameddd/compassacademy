@@ -54,8 +54,8 @@ export const SearchBar = memo(function SearchBar({ variant = "header" }: { varia
           placeholder={t("header.searchPlaceholder")}
           className={`w-full ${
             isHero
-              ? "h-12 pl-4 pr-24 bg-background border border-border rounded-xl text-sm"
-              : "w-72 h-10 pl-10 pr-24 bg-secondary border border-border rounded-lg text-sm"
+              ? "h-12 pl-4 pr-24 bg-muted border border-border rounded-xl text-sm"
+              : "w-72 h-10 pl-10 pr-24 bg-muted border border-border rounded-lg text-sm"
           } text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-brand transition-colors`}
         />
         {!isHero && (

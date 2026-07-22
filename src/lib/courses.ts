@@ -1,4 +1,4 @@
-import englishImg from "@/assets/Frame 7 (3).webp";
+import englishImg from "@/assets/eng.webp";
 import spanishImg from "@/assets/sp.webp";
 
 export type Review = {
