@@ -13,7 +13,6 @@ import {
   User,
   Quote,
   Users,
-  HeartHandshake,
 } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { RegisterDialog } from "@/components/site/RegisterDialog";
@@ -35,6 +34,15 @@ export const Route = createFileRoute("/courses/$slug")({
         { name: "description", content: description },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
+        { property: "og:type", content: "product" },
+        { name: "robots", content: "index, follow" },
+      ],
+      links: [
+        { rel: "canonical", href: `https://compassacademy.vercel.app/courses/${params.slug}` },
+        { rel: "alternate", hrefLang: "en", href: `https://compassacademy.vercel.app/courses/${params.slug}?lng=en` },
+        { rel: "alternate", hrefLang: "fr", href: `https://compassacademy.vercel.app/courses/${params.slug}?lng=fr` },
+        { rel: "alternate", hrefLang: "ar", href: `https://compassacademy.vercel.app/courses/${params.slug}?lng=ar` },
+        { rel: "alternate", hrefLang: "x-default", href: `https://compassacademy.vercel.app/courses/${params.slug}` },
       ],
     };
   },
@@ -66,6 +74,28 @@ function CourseDetailsPage() {
   const course = useLocalizedCourse(slug);
   if (!course) return null;
 
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.title,
+    description: course.description,
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "Compass Academy",
+    },
+    offers: {
+      "@type": "Offer",
+      price: course.price,
+      priceCurrency: "DZD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: course.rating,
+      reviewCount: course.reviewsCount || course.reviews.length,
+    },
+  };
+
   if (!course.available) {
     return (
       <Layout>
@@ -85,6 +115,10 @@ function CourseDetailsPage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-6 sm:py-8 pb-28 lg:pb-16">
         <div className="flex flex-col lg:flex-row gap-6 sm:gap-10">
           {/* LEFT COLUMN — 70% */}
@@ -110,7 +144,7 @@ function CourseDetailsPage() {
       </div>
 
       {/* Mobile sticky enroll bar */}
-      <MobileEnrollBar courseSlug={course.slug} />
+      <MobileEnrollBar course={course} />
     </Layout>
   );
 }
@@ -483,7 +517,7 @@ function SidebarCard({ course }: { course: Course }) {
   );
 }
 
-function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
+function MobileEnrollBar({ course }: { course: Course }) {
   const { t } = useTranslation();
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-border px-4 sm:px-6 py-3 sm:py-4 flex items-center gap-3 sm:gap-4">
@@ -500,45 +534,6 @@ function MobileEnrollBar({ courseSlug }: { courseSlug: string }) {
           </button>
         }
       />
-    </div>
-  );
-}
-
-function InstructorSection({ instructor }: { instructor: Course["instructor"] }) {
-  const { t } = useTranslation();
-  if (!instructor.name) return null;
-  return (
-    <div className="bg-white rounded-2xl p-5 sm:p-8 border border-border">
-      <h3 className="text-base font-semibold text-ink">{t("courseDetail.instructor")}</h3>
-
-      <div className="mt-5 flex flex-col items-center text-center">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand/20 via-purple-100 to-blue-100 flex items-center justify-center overflow-hidden border-2 border-brand/20">
-          {instructor.avatar ? (
-            <img src={instructor.avatar} alt={instructor.name} className="w-full h-full object-cover" />
-          ) : (
-            <User className="w-8 h-8 text-brand" />
-          )}
-        </div>
-        <h4 className="mt-4 font-semibold text-ink text-base">{instructor.name}</h4>
-        <p className="text-xs text-muted-foreground">{instructor.title}</p>
-      </div>
-
-      <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{instructor.bio}</p>
-
-      <div className="mt-4 space-y-3 text-sm text-muted-foreground pt-4 border-t border-border">
-        <div className="flex items-center gap-3">
-          <Users className="w-4 h-4 text-brand shrink-0" />
-          <span>{instructor.students}</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <HeartHandshake className="w-4 h-4 text-brand shrink-0" />
-          <span>{instructor.experience}</span>
-        </div>
-      </div>
-
-      <p className="mt-4 text-sm text-muted-foreground leading-relaxed italic border-t border-border pt-4">
-        &ldquo;{instructor.philosophy}&rdquo;
-      </p>
     </div>
   );
 }

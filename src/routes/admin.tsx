@@ -6,6 +6,9 @@ import type { AuthSession } from "@supabase/supabase-js";
 import { Layout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/admin")({
+  head: () => ({
+    meta: [{ name: "robots", content: "noindex, nofollow" }],
+  }),
   component: AdminPage,
 });
 

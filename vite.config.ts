@@ -11,4 +11,14 @@ export default defineConfig({
     tailwindcss(),
     tsConfigPaths(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-router": ["@tanstack/react-router", "@tanstack/react-start", "@tanstack/router-plugin"],
+          "vendor-i18n": ["i18next", "react-i18next", "i18next-browser-languagedetector"],
+        },
+      },
+    },
+  },
 });

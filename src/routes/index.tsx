@@ -7,6 +7,21 @@ import { SearchBar } from "@/components/site/SearchBar";
 import { courses } from "@/lib/courses";
 import dodoBg from "@/assets/dodo.webp";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Compass Academy",
+  url: "https://compassacademy.vercel.app",
+  logo: "https://compassacademy.vercel.app/logooc.svg",
+  description: "A modern minimalist language academy. Structured courses from A1 to C2, certified instructors, and an immersive learning experience.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Algiers",
+    addressCountry: "DZ",
+  },
+  sameAs: [],
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -21,6 +36,14 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Learn languages with confidence — A1 to C2.",
       },
+      { name: "robots", content: "index, follow" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compassacademy.vercel.app" },
+      { rel: "alternate", hrefLang: "en", href: "https://compassacademy.vercel.app?lng=en" },
+      { rel: "alternate", hrefLang: "fr", href: "https://compassacademy.vercel.app?lng=fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://compassacademy.vercel.app?lng=ar" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://compassacademy.vercel.app" },
     ],
   }),
   component: HomePage,
@@ -32,6 +55,10 @@ function HomePage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {/* Hero */}
       <section className="relative border-b border-border overflow-hidden">
         {/* Mobile background image */}
