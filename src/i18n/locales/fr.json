@@ -6,8 +6,6 @@
     "contact": "Contact"
   },
   "header": {
-    "searchPlaceholder": "Explorer les langues...",
-    "searchButton": "Rechercher",
     "toggleMenu": "Menu"
   },
   "home": {
@@ -97,7 +95,7 @@
     "instructor": "À propos de l'instructeur",
     "lessons": "Leçons",
     "assignments": "Devoirs",
-    "price": "Prix par niveau",
+    "price": "Prix",
     "enroll": "S'inscrire",
     "viewDetails": "Voir les détails",
     "studentJourney": "Parcours d'apprentissage",
@@ -110,8 +108,8 @@
       "Test de fin de niveau",
       "Certificat de completion"
     ],
-    "format": "En présentiel + En ligne",
-    "duration": "6 semaines par niveau",
+    "format": "En ligne",
+    "duration": "1,5 mois par niveau",
     "cohortSize": "Maximum 12 étudiants par groupe",
     "sections": "sections",
     "lessons_lower": "leçons",
@@ -158,12 +156,12 @@
       "category": "Cours d'Anglais",
       "tagline": "Parlez avec confiance — du A1 au C1.",
       "description": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.",
-      "longDescription": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.\n\n• Programme basé sur le CECRL (A1–C1)\n• Maîtriser l'expression orale, l'écoute, la lecture et l'écriture\n• Progression intensive de 6 semaines par niveau\n• Petits groupes (maximum 12 étudiants) pour une attention personnalisée\n• Enseignants d'anglais professionnels et expérimentés\n• Méthodes d'apprentissage interactives et actives\n• Suivi quotidien par l'enseignant et retours personnalisés\n• Quiz réguliers et évaluations de progression\n• Pratique de communication réelle dans chaque session\n• Environnement bienveillant axé sur la confiance et la fluidité",
-      "duration": "8 semaines par niveau",
+      "longDescription": "À Compass Academy, les étudiants n'étudient pas seulement l'anglais — ils vivent la langue. Notre programme basé sur le CECRL (A1–C1) est conçu pour aider les apprenants à maîtriser l'expression orale, l'écoute, la lecture et l'écriture grâce à une communication pratique, un apprentissage intensif et un accompagnement continu par des instructeurs expérimentés.\n\n• Programme basé sur le CECRL (A1–C1)\n• Maîtriser l'expression orale, l'écoute, la lecture et l'écriture\n• 2 sessions par semaine, chaque session de 2 heures\n• Progression de 1,5 mois par niveau\n• Petits groupes (maximum 12 étudiants) pour une attention personnalisée\n• Enseignants d'anglais professionnels et expérimentés\n• Méthodes d'apprentissage interactives et actives\n• Suivi quotidien par l'enseignant et retours personnalisés\n• Quiz réguliers et évaluations de progression\n• Pratique de communication réelle dans chaque session\n• Environnement bienveillant axé sur la confiance et la fluidité",
+      "duration": "1,5 mois par niveau",
       "totalDuration": "100+ heures",
       "levels": "A1 — C1",
-      "format": "En présentiel + en ligne",
-      "location": "Alger + Zoom en direct",
+      "format": "En ligne",
+      "location": "En ligne via Zoom",
       "cohortSize": "Maximum 12 étudiants par cohorte",
       "highlights": [
         "Parler anglais avec confiance dans les situations quotidiennes et professionnelles",
@@ -299,10 +297,10 @@
       "faq": [
         { "q": "Comment connaître mon niveau de départ ?", "a": "Chaque nouvel étudiant passe un test de placement gratuit avant l'inscription — oral + écrit — pour commencer au bon niveau." },
         { "q": "Que se passe-t-il si je manque une session ?", "a": "Toutes les sessions sont enregistrées et partagées via Google Drive sous 24 heures. Les fiches d'exercices restent disponibles pendant tout le niveau." },
-        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre un niveau complet de 6 semaines. Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause entre les niveaux." },
+        { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre un niveau complet de 1,5 mois. Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause entre les niveaux." },
         { "q": "Quand commencent les nouveaux groupes ?", "a": "De nouveaux groupes commencent chaque mois. Contactez-nous via le formulaire d'inscription et nous vous enverrons les prochaines dates." },
         { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — du A1 au C1." },
-        { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Les deux. Les sessions ont lieu en présentiel à Alger et sont simultanément diffusées via Zoom. Vous pouvez assister de l'une ou l'autre manière." }
+        { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Toutes les sessions se tiennent en ligne via Zoom. Vous pouvez assister depuis n'importe où avec une connexion Internet stable." }
       ]
     },
     "french": {
@@ -318,10 +316,10 @@
       "description": "Apprendre l'espagnol n'a jamais été aussi facile. Chez Compass Academy, vous suivrez un programme basé sur le CECRL (A1 + A2) conçu pour vous aider à parler, comprendre, lire et écrire en espagnol avec confiance grâce à des leçons pratiques et de vraies conversations.",
       "longDescription": "Apprendre l'espagnol n'a jamais été aussi facile. Chez Compass Academy, vous suivrez un programme basé sur le CECRL (A1 + A2) conçu pour vous aider à parler, comprendre, lire et écrire en espagnol avec confiance grâce à des leçons pratiques et de vraies conversations.\n\n• Programme CECRL (A1 + A2)\n• Accent sur l'oral dès le premier jour\n• Pratique de lecture, écriture et écoute\n• Programme de 3 mois, 2 sessions par semaine\n• Petits groupes (max. 12 étudiants)\n• Enseignants expérimentés et bienveillants\n• Suivi quotidien, quiz et retours personnalisés\n• Apprentissage interactif avec des situations réelles",
       "duration": "3 mois",
-      "totalDuration": "48 heures",
+      "totalDuration": "100+ heures",
       "levels": "A1 + A2",
-      "format": "En présentiel + en ligne",
-      "location": "Alger + Zoom en direct",
+      "format": "En ligne",
+      "location": "En ligne via Zoom",
       "cohortSize": "Maximum 12 étudiants",
       "highlights": [
         "Parlez espagnol avec confiance dans les conversations quotidiennes",
@@ -387,8 +385,8 @@
         "philosophy": "L'apprentissage des langues doit être pratique, agréable et basé sur la communication réelle. Chaque étudiant a la capacité de devenir fluent avec les bons conseils et une pratique régulière."
       },
       "reviews": [
-        { "name": "أحمد بن علي", "avatar": "", "profession": "مهندس برمجيات", "rating": 5, "text": "Ce cours a transformé ma confiance en espagnol. L'approche structurée et la pratique de la conversation réelle ont fait toute la différence." },
-        { "name": "سارة محمود", "avatar": "", "profession": "أخصائية تسويق", "rating": 5, "text": "Les sections de prononciation et de fluidité ont été incroyablement utiles. Les instructeurs sont compétents et les sessions de pratique entre pairs m'ont donné confiance." }
+        { "name": "أحمد بن علي", "avatar": "", "rating": 5, "text": "Ce cours a transformé ma confiance en espagnol. L'approche structurée et la pratique de la conversation réelle ont fait toute la différence." },
+        { "name": "سارة محمود", "avatar": "", "rating": 5, "text": "Les sections de prononciation et de fluidité ont été incroyablement utiles. Les instructeurs sont compétents et les sessions de pratique entre pairs m'ont donné confiance." }
       ],
       "faq": [
         { "q": "Comment connaître mon niveau de départ ?", "a": "Chaque nouvel étudiant passe un test de placement gratuit avant l'inscription — oral + écrit — pour commencer au bon niveau." },
@@ -396,7 +394,7 @@
         { "q": "Puis-je payer par niveau ?", "a": "Oui. Le prix couvre le programme complet A1 + A2 (3 mois). Il n'y a pas d'engagement à long terme — vous pouvez arrêter ou faire une pause après l'achèvement." },
         { "q": "Quand commencent les nouveaux groupes ?", "a": "De nouveaux groupes commencent chaque mois. Contactez-nous via le formulaire d'inscription et nous vous enverrons les prochaines dates." },
         { "q": "Quel certificat vais-je recevoir ?", "a": "Après avoir réussi le test de fin de niveau, vous recevez un certificat confirmant votre niveau — A1 et A2." },
-        { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Les deux. Les sessions ont lieu en présentiel à Alger et sont simultanément diffusées via Zoom. Vous pouvez assister de l'une ou l'autre manière." }
+        { "q": "Le cours est-il en présentiel ou en ligne ?", "a": "Toutes les sessions se tiennent en ligne via Zoom. Vous pouvez assister depuis n'importe où avec une connexion Internet stable." }
       ]
     }
   }
