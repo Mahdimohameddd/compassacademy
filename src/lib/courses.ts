@@ -1,4 +1,5 @@
 import englishImg from "@/assets/Frame 7 (3).webp";
+import spanishImg from "@/assets/sp.webp";
 
 export type Review = {
   name: string;
@@ -321,7 +322,7 @@ const spanishCourse: Course = {
   duration: "6 weeks per level",
   totalDuration: "100+ hours",
   levels: "A1 — C1",
-  image: englishImg,
+  image: spanishImg,
   available: true,
   sessionsPerWeek: 5,
   sessionDuration: "1h30",

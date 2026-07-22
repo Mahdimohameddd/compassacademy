@@ -40,7 +40,7 @@ export const CourseCard = memo(function CourseCard({ course }: { course: Course 
 
       {/* Title under image */}
       <h3 className="mt-4 sm:mt-5 text-xl sm:text-2xl md:text-[28px] font-semibold text-ink leading-tight tracking-tight">
-        English Course
+        {tc("title", course.title)}
       </h3>
 
       {/* Description */}
