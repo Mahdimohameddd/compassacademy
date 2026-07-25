@@ -151,7 +151,17 @@
     "emailLabel": "Email",
     "course": "Cours",
     "level": "Niveau",
+    "status": "Statut",
     "date": "Date",
+    "actions": "Actions",
+    "accepted": "Accepter",
+    "rejected": "Refuser",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "downloadCsv": "Télécharger CSV",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette inscription ?",
     "empty": "Aucune inscription pour le moment."
   },
   "course": {

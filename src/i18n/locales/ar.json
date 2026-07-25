@@ -151,7 +151,17 @@
     "emailLabel": "البريد الإلكتروني",
     "course": "الدورة",
     "level": "المستوى",
+    "status": "الحالة",
     "date": "التاريخ",
+    "actions": "الإجراءات",
+    "accepted": "قبول",
+    "rejected": "رفض",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "downloadCsv": "تحميل CSV",
+    "confirmDelete": "هل أنت متأكد من حذف هذا التسجيل؟",
     "empty": "لا توجد تسجيلات بعد."
   },
   "course": {
