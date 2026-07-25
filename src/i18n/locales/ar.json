@@ -74,6 +74,9 @@
     "phonePlaceholder": "+213 5XX XX XX XX",
     "email": "البريد الإلكتروني",
     "emailPlaceholder": "email@example.com",
+    "course": "الدورة",
+    "english": "الإنجليزية",
+    "spanish": "الإسبانية",
     "level": "المستوى الذي ترغب به",
     "a1": "A1 — مبتدئ",
     "a2": "A2 — ابتدائي",
@@ -146,6 +149,7 @@
     "name": "الاسم",
     "phone": "الهاتف",
     "emailLabel": "البريد الإلكتروني",
+    "course": "الدورة",
     "level": "المستوى",
     "date": "التاريخ",
     "empty": "لا توجد تسجيلات بعد."

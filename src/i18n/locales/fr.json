@@ -74,6 +74,9 @@
     "phonePlaceholder": "+213 5XX XX XX XX",
     "email": "Email",
     "emailPlaceholder": "email@example.com",
+    "course": "Cours",
+    "english": "Anglais",
+    "spanish": "Espagnol",
     "level": "Niveau souhaité",
     "a1": "A1 — Débutant",
     "a2": "A2 — Élémentaire",
@@ -146,6 +149,7 @@
     "name": "Nom",
     "phone": "Téléphone",
     "emailLabel": "Email",
+    "course": "Cours",
     "level": "Niveau",
     "date": "Date",
     "empty": "Aucune inscription pour le moment."

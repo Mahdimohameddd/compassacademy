@@ -25,6 +25,7 @@ export function RegisterDialog({
       phone: data.get("phone"),
       email: data.get("email"),
       level: data.get("level"),
+      course: data.get("course"),
     });
 
     if (err) {
@@ -96,6 +97,16 @@ export function RegisterDialog({
                         placeholder={t("register.emailPlaceholder")}
                         className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm placeholder:text-muted-foreground/70 focus:outline-none focus:border-brand focus:bg-background transition-colors"
                       />
+                    </Field>
+                    <Field label={t("register.course")}>
+                      <select
+                        name="course"
+                        defaultValue="english"
+                        className="w-full bg-secondary border border-border rounded-sm px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand focus:bg-background transition-colors"
+                      >
+                        <option value="english">{t("register.english")}</option>
+                        <option value="spanish">{t("register.spanish")}</option>
+                      </select>
                     </Field>
                     <Field label={t("register.level")}>
                       <select

@@ -18,6 +18,7 @@ type Registration = {
   phone: string;
   email: string;
   level: string;
+  course: string;
   created_at: string;
 };
 
@@ -129,6 +130,7 @@ function AdminPage() {
                 <th className="py-3 pr-4 font-medium">{t("admin.name")}</th>
                 <th className="py-3 pr-4 font-medium">{t("admin.phone")}</th>
                 <th className="py-3 pr-4 font-medium">{t("admin.emailLabel")}</th>
+                <th className="py-3 pr-4 font-medium">{t("admin.course")}</th>
                 <th className="py-3 pr-4 font-medium">{t("admin.level")}</th>
                 <th className="py-3 font-medium">{t("admin.date")}</th>
               </tr>
@@ -139,6 +141,11 @@ function AdminPage() {
                   <td className="py-3 pr-4 text-foreground">{r.full_name}</td>
                   <td className="py-3 pr-4 text-muted-foreground">{r.phone}</td>
                   <td className="py-3 pr-4 text-muted-foreground">{r.email}</td>
+                  <td className="py-3 pr-4">
+                    <span className="px-2 py-0.5 text-xs font-medium bg-brand/10 text-brand rounded-full capitalize">
+                      {r.course || "english"}
+                    </span>
+                  </td>
                   <td className="py-3 pr-4">
                     <span className="px-2 py-0.5 text-xs font-medium bg-brand/10 text-brand rounded-full">
                       {r.level.toUpperCase()}
